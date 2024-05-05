@@ -1,0 +1,344 @@
+.big-board {
+    width: 600px;
+    height: 450px;
+ }
+ 
+ .big2-board {
+    width: 700px !important;
+    min-width: 300px !important;
+    max-width: 700px !important;
+ }
+ 
+ .big3-board {
+    width: 570px !important;
+    min-width: 300px !important;
+    max-width: 700px !important;
+ }
+ 
+ @media only screen and (max-width: 450px) {
+    .big2-board {
+       width: 300px !important;
+    }
+ 
+    .big3-board {
+       width: 300px !important;
+    }
+ }
+ 
+ @media only screen and (min-width: 450px) and (max-width: 600px) {
+    .big2-board {
+       width: 450px !important;
+    }
+ 
+    .big3-board {
+       width: 450px !important;
+    }
+ }
+ 
+ /* Eliezer EgineColor*/
+ 
+  /*--------------*/
+  
+  
+  .colorArtifact{
+    width: 400px;
+    height: 500px;
+    margin: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .artifactColor{
+    width: 100%;
+    height: 100% ;
+    border: 3px solid #469be0;
+    background-color: #eff1f5;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .artifactColor__notification{
+    position: absolute;
+    width: 90%;
+    height: 44px;
+    top: 20px;
+    right: 0;
+    border-top-left-radius: 1rem ;
+    border-bottom-left-radius: 1rem ;
+    background-color: #ccc;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform .2s;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f3f3f3;
+    font-weight: 700;
+  }
+  .infoNotification{
+    background-color: #1665d8;
+  }
+  
+  .errorNotification{
+    background-color: #ad3e43;
+  }
+  
+  .successNotification{
+    background-color: #b6f3bf ;
+    
+    color: #222;
+  
+    height: 60px;
+    top: 50px;
+    border-radius: 1rem;
+    border: 1px solid #000;
+    width: 100px;
+    transform: none;
+    justify-content: center;
+    padding-left: 0;
+    left: 0;
+    margin: auto;
+  }
+  
+  
+  .infoNotification::before{
+    content: '\24D8';
+    color: #f3f3f3;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .errorNotification::before{
+    content: '\26A0';
+  
+    color: #f3f3f3;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .artifactColor__notification[data-show = 'true']{
+    transform: translateX(0);
+  }
+  .artifactColor__Board {
+   
+    /* height: 450px; */
+    height: 95%;
+    min-height: 240px;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  
+  .artifactColor__btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-top: 2px solid #aeaeaf;
+  
+  }
+  
+  .artifactColor__Otherbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .choseColors{
+  display: flex;
+  
+  width: 220px;
+  
+  
+  }
+  
+  .choseColors__elements{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .choseColors__select{ 
+    width: 60px;
+    height: 50px;
+    background-color: #f3f3f3;
+    border: 1px solid #d0d1d3;
+    border-radius: .5rem;
+    display: flex;
+    position: relative;
+  }
+  .choseColors__select:hover{
+    cursor: pointer;
+    border: 2px solid #9e9fa0;
+  }
+  
+  .choseColors__select::after{
+    content: '🎨';
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 20px;
+  }
+  .btnChangePosition{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: .2rem;
+    transition: border-radius .5s;
+  }
+  .btnChangePosition::after{
+    /* content: '\21C4'; */
+    content: '1/x';
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0979b0;
+  }
+  .btnChangePosition:hover{
+    border-radius: 50%;
+    border: 2px solid #469be0 ;
+  }
+  
+  .artifactColor__menu{
+    height: 0;
+    min-height: 0;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    box-sizing: border-box;
+    bottom: 50px;
+    background-color: #e9edf3;
+    transition-property: min-height, height;
+    transition-duration: .2s, .2s ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  
+  .artifactColor__menu--open{
+    border: 2px solid #aeaeaf;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom: none;
+    height: min-content;
+   /*  min-height:min-content; */
+    padding-top: 12px !important;
+    cursor: pointer;
+    overflow: auto;
+  }
+  
+  .artifactColor__menuContent{
+    overflow: hidden;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .artifactColor__menuColors:nth-child(2){
+    padding-top: 8px;
+    border-top: 2px solid #aeaeaf;  
+  }
+  .arrowToClose{
+   margin: 5px auto;
+   width: 90%;
+   text-align: center;
+   border-radius: 10px;
+   padding: 0;
+  }
+  
+  .arrowToClose::after{
+    content: '\2304';
+    font-size: 28px;
+    
+    padding-bottom: 0;
+    color: rgb(38, 38, 39);
+    text-align: center;
+  }
+  
+  .arrowToClose:hover{
+    background-color: #ababf7;
+  }
+  .artifactColor__menuColors{
+    
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: flex-start;
+  
+    margin-bottom: 10px;
+  }
+  
+  .artifactColor__MenuColorOption{
+    width: calc(100% / 11);
+    height: 32px;
+    margin: 4px;
+    background-color: #ba94a7;
+    border-radius: .2rem;
+    opacity: .5;
+    outline: 3px solid #121313;
+    
+  }
+  .artifactColor__MenuColorOption:hover{
+    transform: scale(1.05);
+  }
+  
+  .choseColors__select[data-status = 'active']{
+    border: 2px solid #9e9fa0 ;
+  }
+  
+  
+  @media only screen and (max-width: 450px) {
+    .artifactColor{
+      width: 100%;
+      height: 500px;
+    }
+   /*  .artifactColor__Board{
+      height: 200px;
+    } */
+    .artifactColor__MenuColorOption{
+      height: 44px;
+      width: 44px;
+    }
+    .colorArtifact{
+      box-sizing: border-box;
+      width: 96%;
+    }
+    .choseColors{
+      width: 50%;
+    }
+    .choseColors__elements{
+      gap: 10px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 380px){
+    .artifactColor__MenuColorOption{
+      width: 20px;
+      height: 24px;
+      padding-top: 30px;
+    }
+  
+    .artifactColor__menu{
+      bottom: 119px;
+    }
+    .choseColors{
+      width: 100%;
+      justify-content: center;
+      border-bottom: 1px solid #000;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  
+  
+  

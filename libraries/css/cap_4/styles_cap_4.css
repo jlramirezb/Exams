@@ -1,0 +1,223 @@
+/* ALPHABET ENGINE */
+
+.alphabetEngine {
+  width: 500px;
+  height: 550px;
+}
+
+.alphabetEngineContainer {
+  width: 100%;
+  border: 2px solid #494848;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #9ecdee;
+}
+
+.alphabetEngine__btnContainer {
+  width: 100%;
+  height: 10%;
+  background-color: #fff;
+  border: 1px solid;
+  display: flex;
+  justify-content: end;
+}
+.alphabetEngine__Board {
+  height: 50%;
+  background-color: #fefefe;
+  border-bottom: 2px solid #3d3b3b;
+}
+
+.alphabetEngine__questions {
+  height: 50%;
+  display: flex;
+  background-color: #fefefe;
+}
+
+.alphabetEngine__diagram {
+  width: 50%;
+  /* background-color: #006ebb; */
+}
+.alphabetEngine__diagram {
+  display: grid;
+  grid-template-areas:
+    "head1 head2 head3 head4 head5 head6 head7"
+    "head8 head9 head10 head11 head12 head13 head14"
+    "body1 body2 body3 body4 body5 body6 body7"
+    "body8 body9 body10 body11 body12 body13 body14"
+    "end1 end2 end3 end4 end5 end6 end7"
+    "end8 end9 end10 end11 end12 end13 end14 ";
+}
+
+.alphabetEngine__rounded {
+  margin-top: 10px;
+  border: 1px solid #141313;
+  background-color: #fdfdfd;
+  border-radius: 10rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alphabetEngine__rounded-math-field {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alphabetEngine__square {
+  align-self: center;
+  height: 50px;
+  border: 1px solid #141313;
+  grid-column: body1/body2;
+  margin-left: 10px;
+  display: flex;
+}
+
+.alphabetEngine__square-math-field {
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.roundedPositionTop {
+  grid-column: head2/head6;
+  grid-row: span 2;
+}
+
+.roundedPositionBottom {
+  margin: 0;
+  grid-column: end2/end6;
+  grid-row: span 2;
+}
+
+.arrowDown--cap4 {
+  grid-area: body4;
+  text-align: center;
+}
+
+.alphabetEngine__btnsPars {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #076382;
+  background-color: #e8f9fd;
+
+}
+
+.alphabetEngine__ordenatePars {
+  width: 100%;
+  height: 45%;
+  margin-bottom: 5px;
+  /* border-bottom: 1px solid #076382; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #e8f9fd; */
+  /* border-radius: .5rem; */
+}
+
+.alphabetEngine__ordenatePar-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.textOrdenatePar {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0aa0db;
+}
+.alphabetEngine__ordenatePar-mathfield {
+  width: 40%;
+  border-radius: 0.3rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 2px;
+  border: 2px solid #f1604d;
+
+}
+
+.alphabetEngine__createPars {
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #e8f9fd;
+}
+
+math-field::part(virtual-keyboard-toggle) {
+  display: none;
+}
+math-field::part(menu-toggle) {
+  display: none;
+}
+
+.createPointBtn {
+  width: 90%;
+  height: 50px;
+  border: 2px solid#f1604d;
+  background-color: #e8f9fd;
+  border-radius: 0.3rem;
+}
+
+.createPointBtn:hover {
+  background-color: #d7e7eb;
+}
+
+.createPointBtn:active {
+  background-color: #c5d4d8;
+}
+
+@media only screen and (max-width: 500px) {
+  .alphabetEngine {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .alphabetEngine__questions {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .alphabetEngine__diagram {
+    align-self: center;
+    width: 70%;
+    height: 80%;
+  }
+  .alphabetEngine__btnsPars {
+    width: 100%;
+    height: 20%;
+    flex-direction: row;
+  }
+
+  .alphabetEngine__ordenatePars {
+    height: 100%;
+    width: 70%;
+  }
+  .alphabetEngine__createPars {
+    height: 100%;
+    width: 30%;
+  }
+}
+
+
+.opacityInputs {
+  opacity: 0.5;
+}
+.pointerInputs {
+  cursor: pointer;
+}
+.ordenateParMouseOver {
+  background-color:#e8f9fd ;
+}

@@ -1,0 +1,4016 @@
+/* 0.89.4 */
+:root {
+  --roadColor: red;
+  --blue1: #076382;
+  --blue2: #217e9d;
+  --blue3: #0aa1dd;
+
+  --blue4: #e8f9fd;
+  --orange1: #f1604d;
+}
+
+@font-face {
+  font-family: openSans-regular;
+  src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_AMS;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_AMS-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Caligraphic;
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Caligraphic;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Fraktur;
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Fraktur;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Main;
+  font-style: italic;
+  font-weight: 700;
+  src: url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Main;
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/KaTeX_Main-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Main;
+  font-style: italic;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Main-Italic.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Main;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Main-Regular.ttf) format("ttf");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Math;
+  font-style: italic;
+  font-weight: 700;
+  src: url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: "KaTeX_Math";
+  font-style: italic;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Math-Italic.ttf) format("ttf");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: "KaTeX_SansSerif";
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: "KaTeX_SansSerif";
+  font-style: italic;
+  font-weight: 400;
+  src: url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: "KaTeX_SansSerif";
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Script;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Script-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Size1;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Size1-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Size2;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Size2-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Size3;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Size3-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Size4;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Size4-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-display: "swap";
+  font-family: KaTeX_Typewriter;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2");
+}
+
+:root {
+  --ML__static-fonts: true;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: none;
+}
+
+/* Aqui comienza los iconos es formato unicode de los botones*/
+.check::after {
+  display: inline-block;
+  color: #fff;
+  content: " ✓";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.reset::after {
+  color: black;
+  content: "\021bb";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.conect::after {
+  color: #d65d06;
+  content: "\2933";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.infinite::after {
+  color: #d65d06;
+  content: "\221E";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.pointOpen::before {
+  color: #d65d06;
+  content: "○";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.pointClose::after {
+  color: #d65d06;
+  content: "●";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.mayorEqual::after {
+  color: #646363;
+  content: "\2265";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.minorEqual::after {
+  color: #646363;
+  content: "\2264";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.mayor::after {
+  color: #646363;
+  content: "\003E";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.minor::after {
+  color: #646363;
+  content: "\003C";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.equal::after {
+  color: #646363;
+  content: "\003D";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.notEqual::after {
+  color: #646363;
+  content: "\2260";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.empty::after {
+  color: #646363;
+  content: "\2205";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.setOf::after {
+  color: #646363;
+  content: "\22C3";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.intersection::after {
+  color: #646363;
+  content: "\22C2";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.realNumber::after {
+  color: #646363;
+  content: "\0052";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.parenthesisLeft::after {
+  color: #646363;
+  content: "\0028";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.parenthesisRight::after {
+  color: #646363;
+  content: "\0029";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.bracketsLeft::after {
+  color: #646363;
+  content: "\005B";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.bracketsRight::after {
+  color: #646363;
+  content: "\005D";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.keysLeft::after {
+  color: #646363;
+  content: "\007B";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.keysRight::after {
+  color: #646363;
+  content: "\007D";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.infiniteWrite::after {
+  color: #646363;
+  content: "\221E";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.notExist::after {
+  color: #646363;
+  content: "\2204";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.gear::after {
+  color: #000000;
+  content: "\2699";
+  font-family: Noto Emoji;
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+/*dominio*/
+.domKey::after {
+  position: relative;
+  top: -5px;
+  left: 3.5px;
+  color: #d65d06;
+  content: "\2847";
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.rangKey::after {
+  position: relative;
+  top: -12px;
+  left: 0px;
+  color: #d65d06;
+  content: "\2508";
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+/*cota superior*/
+.coteTop::after {
+  color: #d65d06;
+  content: "\2912";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+/*cota inferior*/
+.coteDown::after {
+  color: #d65d06;
+  content: "\2913";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+/* retroceder */
+.back::after {
+  color: var(--color, #000000);
+  content: "\21B6";
+  /* ó    ---> 21BA*/
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+/*unicode del boton para abrir el keyboard*/
+.keyBoard::after {
+  color: rgb(0, 0, 0);
+  content: "⌨";
+  font-size: 30px;
+  position: relative;
+  top: -12px;
+  left: -6px;
+}
+
+/*unicode de la X para cerrar el keyboard cap 0*/
+.closed::after {
+  color: #000000;
+  content: "\2715";
+  font-size: 24px;
+  position: relative;
+  top: -5px;
+}
+
+/* /////////////////////////////////// unicode motor de caminos //////////////////////*/
+
+.road::before {
+  color: var(--color, #d65d06);
+  content: "\2608";
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.finishRoad::after {
+  color: var(--color, black);
+  content: " \0298";
+  font-weight: lighter;
+  font-size: 26px;
+}
+
+/* unicode Asymptotas */
+.btnAsymptotes::after {
+  color: var(--color, #d65d06);
+  content: "|";
+  font-size: 26px;
+  position: relative;
+  /*   top: -14px; */
+}
+
+/* boton de ayuda */
+.help::after {
+  color: #000000;
+  content: "\2691";
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+/* boton para cerrrar la ayuda */
+.btnCloseMsg::after {
+  content: "\00AB";
+}
+
+.arrowUp::after {
+  color: black;
+  content: "\2191";
+  font-weight: 900;
+  font-size: 60px;
+}
+
+.arrowDown::after {
+  color: black;
+  content: "\2193";
+  font-weight: 900;
+  font-size: 60px;
+}
+
+/* Aqui Termina los iconos es formato unicode de los botones*/
+
+/* --------------------------------------------------------------------- */
+/* Inicio de Estilos de los botones primarios, secuandarios y tercearios */
+
+.buttonPrimary {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #006ebb;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.buttonSecundary {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #a4abb1;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+/* #a4abb1 */
+.buttonTertiary {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #646363;
+  border-radius: 0.25rem;
+}
+
+.buttonAux {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #e17055;
+  border-radius: 0.25rem;
+}
+
+/* Termina Estilos de los botones primarios, secuandarios y tercearios */
+
+/* Color de los input's en los artefactos del capitulo_0 */
+.colorInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  min-width: 45px;
+  min-height: 25px;
+  background-color: #ffffff;
+  -webkit-border-radius: 10px;
+  -ms-touch-action: none;
+}
+
+/* boards carlos */
+
+.med-board {
+  width: 400px;
+  height: 400px;
+}
+
+.short-board {
+  width: 350px;
+  height: 200px;
+}
+
+.med-board-2 {
+  width: 400px;
+  height: 300px;
+}
+
+.big-board {
+  width: 600px;
+  height: 450px;
+}
+
+.big2-board {
+  width: 700px !important;
+  min-width: 300px !important;
+  max-width: 700px !important;
+}
+
+.big3-board {
+  width: 570px !important;
+  min-width: 300px !important;
+  max-width: 700px !important;
+}
+
+.big4-board {
+  width: 600px !important;
+  height: 600px !important;
+  min-width: 300px !important;
+  max-width: 700px !important;
+}
+
+@media only screen and (max-width: 450px) {
+  .table td,
+  .table th {
+    padding: 0px !important;
+  }
+
+  .med-board-2 {
+    width: 300px !important;
+    height: 200px !important;
+  }
+
+  .short-board {
+    width: 300px !important;
+  }
+
+  .big2-board,
+  .big3-board,
+  .big4-board {
+    width: 300px !important;
+    height: 420px !important;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+  .short-board,
+  .big2-board,
+  .big3-board,
+  .big4-board {
+    width: 450px !important;
+  }
+}
+
+.input-zise {
+  width: 45px;
+  border-radius: 10%;
+}
+
+/* Contenedor principal en el motor del capitulo 1 paginas 3-6  */
+/* Crea un contenedor flexible y centra sus hijos */
+.content_1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Contenedor Hijo, toma el ancho de contenedor padre y se coloca a 10px de margen */
+.content_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+/* Contenedor de para los textos toma el 100% del ancho de su padre
+ y coloca los textos en formato centrado y con lineas separadas de 30px */
+.contenedor {
+  width: 100%;
+  text-align: justify;
+  line-height: 30px;
+}
+
+/* Clase para los titulos coloca un margen de 10px en los cuatro lados y pone en negrita el texto */
+.subtitulo {
+  margin: 10px;
+  font-weight: bolder;
+}
+
+/* Clase para los parrafos coloca un margen de 10px en los cuatro lados y el texto lo coloca centrado */
+.parrafo {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+/* Clase para los parrafos coloca flexible el contenedor y en filas los elementos */
+.textDouble {
+  display: flex;
+  flex-direction: row;
+}
+
+/* margen de 5px */
+.margen-5 {
+  margin: 5px;
+}
+
+/* margen de 50px */
+.margen-bottom-50 {
+  margin-bottom: 50px;
+}
+
+/* margen izquierdo que calcula el ancho de la pantaña y lo resta por el 80% de ella
+y añade el elemento a un poco menos de la mitad de la pantalla, de esta manera se logra un movimiento responsive */
+.margen-left {
+  margin-left: calc(100% - (82%));
+}
+
+/* Clase para cuando los artefactos se resuelven de manera correcta */
+.pass {
+  background-color: rgba(73, 225, 94, 0.4) !important;
+  accent-color: rgba(73, 225, 94, 0.4);
+}
+
+/* Clase para cuando los artefactos se resuelven de manera incorrecta */
+.failed {
+  background-color: rgba(203, 78, 31, 0.4) !important;
+  accent-color: rgba(203, 78, 31, 0.4);
+}
+
+/* Clase para cuando los artefactos no se les esta evaluando correcto e incorrecto sino su opinion */
+.yellow {
+  background-color: rgba(236, 184, 12, 0.4);
+}
+
+/* centra el contenido del input, desde el puntero y los value */
+.inputCenter {
+  text-align: center;
+}
+
+/* Margen entre los botones añade 4px a los cuatro lados del boton*/
+.button-marg {
+  margin: 4px;
+}
+
+.contentBoard_Double {
+  width: 400px;
+}
+
+.margen-button {
+  margin-bottom: 20px;
+}
+
+.board-item {
+  width: 100px;
+  height: 100px;
+}
+
+.contenedor::-webkit-scrollbar {
+  width: 8px;
+  /* Tamaño del scroll en vertical */
+  height: 8px;
+  /* Tamaño del scroll en horizontal */
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.contenedor::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.contenedor::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.contenedor::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.contenedor::-webkit-scrollbar-track:hover,
+.contenedor::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+/* Mediaquery para el responsive de los tableros */
+@media only screen and (min-width: 500px) {
+  .table-board {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .content_1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .input-width {
+    width: calc(100% - (60%));
+  }
+}
+
+.input-width {
+  width: calc(100% - (50%));
+}
+
+.center-td {
+  text-align: center;
+}
+
+.table-width {
+  max-width: 600px;
+}
+
+.reduce-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*////////////////
+agregado boton para las curvas
+centrado de texto
+copia de del borde de la libreria
+agregado estilo de incorrecto y correcto sin opasidad para usarlo en el board
+//////////////*/
+.curve::before {
+  color: #d65d06;
+  content: "\007E";
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+/* centra el texto, con un tamaño predeterminado y un padding */
+.textCenter {
+  text-align: center;
+  font-size: 12px;
+  padding: 2px;
+}
+
+/*borde negro del board*/
+.border-board-dark {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  border-radius: 10px;
+  margin: 0;
+  -webkit-border-radius: 10px;
+  -ms-touch-action: none;
+}
+
+.passInLibrary {
+  border: solid #000000 1px;
+  background-color: #b6f3bf;
+}
+
+.gAlert {
+  max-width: 90%;
+  width: fit-content;
+  min-width: 30%;
+  text-align: center;
+  font-size: 18px;
+  padding: 2px;
+  position: absolute;
+}
+
+.failedInLibrary {
+  border: solid #000000 1px;
+  background-color: #eab8a5;
+}
+
+.warnInLibrary {
+  border: solid #ffb11f 1px;
+  background-color: #eab8a5;
+}
+
+/* Clase para la nota en la pagina 3 de las opiniones
+ hace flexible el contenedor, coloca sus elementos al principio y en columnas */
+.nota {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Clase para los comentarios en la pagina de texto html, plano solo hace flexive el contenedor */
+.Contentext {
+  display: flex;
+}
+
+/*crea una sangria o identacion de aproximado unos 30px en el texto  */
+.spacing {
+  text-indent: 30pt;
+}
+
+.divRounded {
+  border-radius: 10px;
+}
+
+.input_invalid {
+  background-color: #eab8a5;
+}
+
+.input_valid {
+  background-color: #b6f3bf;
+}
+
+/* cap_1 */
+/* Estilos de los board  dobles con texto  */
+.contentDoubleBaord {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 25px;
+}
+
+/* clase que se utiliza como contenedor de los board */
+.sizeBoardDouble {
+  max-width: 500px;
+  margin: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* clases para crear una linea divisora en la parte de arriba de un contenedor */
+.borderIndividual {
+  border-top: 1px solid black;
+}
+
+/* clases que pone flexible un contenedor */
+.contenedorGrid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* clase de pruba para verificar que los items-hijos de un contenedor padre esten dentros del mismo.
+ Nota: Esta clase solo se utiliza de prueba. [Status: Testing ]*/
+.testBorder {
+  border: 1px solid rgb(19, 67, 90);
+  border-radius: 0.5rem;
+}
+
+/* grid por default, crea dos columnas y 3 filas con espacios de 20px para casa una de ellas */
+.contenTest {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+/* clase que se utiliza para los elementos que se requiere en negrita, como conceptos claves en alguna definicion  */
+.bold-example {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* crea un margen arriba de 50px */
+.margen-top-50 {
+  margin-top: 50px;
+}
+
+/* es el ancho de los input del tablero estandarizado Nota: Puede que esta clase no se este utilizando, [Status:Por verificar] */
+.input-width-normalice {
+  width: calc(100% - (0%));
+}
+
+/* ancho del elemento th en el tablero */
+.th-table {
+  width: 120px;
+  border: black 1px solid;
+}
+
+/* clase de prueba. Nota: Puede que esta clase no se este utilizando, [Status:Por verificar]*/
+.input-table {
+  width: 100%;
+  border: 0;
+}
+
+.input-conf-Table {
+  text-align: center;
+  /* font-size: 14px; */
+  padding: 2px;
+}
+
+.border-table {
+  border: black 1px solid;
+}
+
+.input-default {
+  background-color: #f6f3c9;
+}
+
+.input-sended {
+  background-color: #f5d101;
+}
+
+/* MediaQuery -- Inicio del responsive de la grid de contenedores, crea una grid de 1 columna para el responsive de movil */
+@media only screen and (min-width: 300px) and (max-width: 720px) {
+  .grid-cap-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contentDoubleBaord {
+    flex-direction: column;
+  }
+
+  .contenTest {
+    display: block;
+  }
+
+  .artefact {
+    width: 320px;
+  }
+
+  .table-width {
+    width: 100%;
+  }
+
+  /*  .allbuttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  } */
+
+  .contentBoard_Double {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 850px) {
+  /*  .contenTest {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  } */
+
+  .artefact {
+    width: 320px;
+  }
+
+  .table-width {
+    width: 100%;
+  }
+}
+
+/* Finaliza el responsive  */
+
+/* centra el contenido en un elemento */
+.item {
+  text-align: center;
+}
+
+/* clase para poner en negrita un titulo */
+.titulo {
+  font-weight: bolder;
+  margin: 0;
+}
+
+/*
+keyBoard
+*/
+/*clase inicial del keyboard lo alinea y lo pone no visible*/
+.popup {
+  display: none;
+  align-content: center;
+}
+
+/*pone el border al conteneor superior del keyboard*/
+.orange-bg {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: orange;
+  width: 100%;
+}
+
+/*contenedor padre del keyboard limita el ancho*/
+.divParent {
+  border-radius: 20px;
+  min-height: 140px;
+  max-width: 650px;
+  min-width: 300px;
+  width: 80%;
+  background-color: grey;
+  justify-items: center;
+}
+
+/* clase para el efecto de los botones */
+.buttonKey {
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  box-shadow: 0 3px #999;
+}
+
+/*hover de los botones */
+.buttonKey:hover {
+  background-color: #899c;
+}
+
+/* al pulsar el boton se mueve hacia abajo 2 pixeles y cambia el fondo*/
+.buttonKey:active {
+  background-color: #797c;
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+/* estado active de los botones mantiene pulsado el boton */
+.buttonDownActive {
+  background-color: #797c;
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+/*estilos del boton que abre el keyboard*/
+.butonKeyBoardOpen {
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  background-color: rgb(224, 198, 79);
+  border: 2px solid #e17055;
+  border-radius: 0.25rem;
+}
+
+.svg-asyntote {
+  background: url("/images/buttons/asyntotes.svg");
+}
+.svg-asyntote-mobile {
+  background: url("../../../public/images/buttons/asyntotes.svg");
+}
+
+.svg-xSlices {
+  background: url("/images/buttons/xSlices.svg");
+}
+
+.svg-xSlices-mobile {
+  background: url("../../../public/images/buttons/xSlices.svg");
+}
+
+/*/////// responsibe engine 0 ////////*/
+/*/////// responsibe engine 0 ////////*/
+.paddiContentAll {
+  width: 100%;
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 10px;
+}
+
+.paddiv {
+  width: 100%;
+  max-width: 900px;
+  min-width: 220px;
+  margin: 0px 0px 70px 0px;
+  border: solid #000000 1px;
+  border-radius: 10px;
+}
+
+.divFather {
+  width: 100%;
+  max-width: 900px;
+  min-width: 220px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 10px;
+}
+
+/*clase de estado 1 inputs engine 0 interval */
+.inpEngInt-1 {
+  min-height: 60px;
+  width: 100%;
+  min-width: 75px;
+  max-width: 200px;
+}
+
+/*clase de estado 2 inputs engine 0 interval */
+.inpEngInt-2 {
+  min-height: 60px;
+  min-height: 60px;
+  min-width: 75px;
+  width: 100%;
+}
+
+.inpEngInt {
+  min-height: 60px;
+  min-width: 75px;
+  width: 100%;
+  border: solid #000000 1px;
+  border-radius: 10px;
+}
+
+/*clase del board lo pone 100% de anccho y sus minimos */
+.BoardEngInt {
+  width: 100%;
+  min-width: 150px;
+  max-width: 650;
+  min-height: 85px;
+}
+
+.contentArtefact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.textValInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid black;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .hola {
+    flex: 0 0 8px;
+    max-width: 50%;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (85%));
+  }
+
+  .small_box {
+    width: 100px;
+    align-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .hola {
+    flex: 0 0 8px;
+    max-width: 50%;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (85%));
+    text-align: center;
+  }
+
+  .small_box {
+    width: 250px;
+    align-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hola {
+    flex: 0 0 8px;
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (85%));
+    text-align: center;
+  }
+
+  .small_box {
+    width: 300px;
+    align-content: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hola {
+    flex: 0 0 8px;
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (85%));
+    text-align: center;
+  }
+
+  .small_box {
+    width: 400px;
+    align-content: center;
+  }
+}
+
+/* Tablero pequeños*/
+@media (min-width: 768px) {
+  .small_box_together {
+    flex: 0 0 2px;
+    max-width: 50%;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (85%));
+  }
+
+  .small_box {
+    width: 100px;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .small_box_together {
+    flex: 0 0 2px;
+    max-width: 50%;
+    border: 0px;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (85%));
+    text-align: center;
+  }
+
+  .small_box {
+    width: 220px;
+    border: 0px;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .small_box_together {
+    flex: 0 0 2px;
+    max-width: 45%;
+    text-align: center;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (85%));
+    text-align: center;
+  }
+
+  .small_box {
+    width: 300px;
+    border: 0px;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .small_box_together {
+    flex: 0 0 2px;
+    max-width: 45%;
+    text-align: center;
+  }
+
+  .input-width-frame {
+    width: calc(100% - (90%));
+    text-align: center;
+  }
+
+  .small_box {
+    width: 400px;
+  }
+}
+
+.centerFloat {
+  z-index: 20;
+  position: absolute;
+  border-radius: 10px;
+  top: 10%;
+}
+
+/* .centerFloat {
+   max-width: 90%;
+   width: fit-content;
+   border-radius: 10px;
+   height: fit-content;
+   position: absolute;
+   top: 15%;
+   left: 50%;
+   transform: translate(-50%, -20%);
+} */
+/* .centerFloat {
+   max-width: 90%;
+   width: auto;
+   left: 50%;
+   position: absolute;
+   transform: translateX(-50%);
+} */
+
+.centerFloat .btnClose {
+  background-color: rgb(239, 47, 47);
+  font-weight: bolder;
+  margin: none !important;
+  padding: 2px !important;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 10%;
+  justify-content: center;
+  box-shadow: none;
+  box-shadow: 0px 1px 2px black;
+}
+
+.centerFloat .btnClose::after {
+  font-size: 10px;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+
+/* Aqui empiezan los nuevos estilo */
+.input-reduce {
+  width: 24px;
+  margin-left: 50px;
+}
+
+.itemContenFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.borderNone {
+  border: 0;
+  border-radius: 2px;
+}
+
+.pass:hover {
+  background-color: rgba(35, 194, 53, 0.6);
+}
+
+.failed:hover {
+  background-color: rgba(167, 62, 22, 0.6);
+}
+
+.sizeContenedor {
+  width: 400px;
+}
+
+.newGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.banderGrid {
+  display: flex;
+}
+
+.noBorder {
+  border: 0;
+}
+
+.border-dark-top {
+  width: 100%;
+  border-top: 1px solid black;
+}
+
+.sizeInput-Default {
+  width: 100%;
+  margin-left: 10px;
+}
+
+.disabledGraph {
+  background-color: #f0eaea !important;
+  cursor: not-allowed;
+}
+
+.board_with_table {
+  width: 250px;
+  height: 250px;
+}
+
+.text-subrayado {
+  background-color: #f6f3c9;
+}
+
+.text-table-font {
+  font-size: 0.6rem;
+}
+
+.input-table.conf {
+  width: 100%;
+  padding: 0px;
+}
+
+.table-with {
+  width: 300px;
+}
+
+.th-table-adjust {
+  width: 32px !important;
+  font-size: 0.6rem !important;
+}
+
+.buttons-bar {
+  width: 260px !important;
+  height: 50px;
+}
+
+.divOrdenate {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid black;
+  font-style: italic;
+}
+
+.divAlignDouble {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.divOrder {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.cleanStyleDefault {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: none;
+}
+
+.orderLarge {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderLitte {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.buttonSecundaryMod {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  background-color: #a4abb1;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.squares-div {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  width: 382px;
+}
+
+@media only screen and (max-width: 500px) {
+  .squares-div {
+    width: 275px;
+  }
+
+  .w-100-500 {
+    width: 100%;
+  }
+}
+
+math-field {
+  caret-color: darkblue;
+}
+
+math-field::selection {
+  background-color: darkblue;
+  color: white;
+}
+
+.boardResp {
+  width: 380px;
+  height: 380px;
+}
+
+/*enunciado debajo del board*/
+.textBottom {
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.textTop {
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  .boardResp {
+    width: 275px;
+    height: 280px;
+  }
+
+  .textBottom {
+    font-size: 0.9rem;
+    height: 45px;
+  }
+
+  .textTop {
+    font-size: 0.9rem;
+    height: 45px;
+  }
+}
+
+/*/////////////////////////////// Modal ///////////////////////////////////*/
+
+/* Close Button */
+.close {
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #e17055;
+  border-radius: 0.25rem;
+}
+
+.closed:hover,
+.closed:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* estilos Eliezer para motor enginetoWay\___________________________________________________________________ */
+
+.etwAllArtifact {
+  /* todos los artefactos */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1px;
+}
+
+.etwArtifact {
+  width: 400px;
+  max-width: 400px;
+  min-width: 280px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 48px 8px 8px;
+  position: relative;
+}
+
+.etwArtifact__title {
+  text-align: center;
+}
+
+.etwArtifact__btnHelp-container {
+  position: absolute;
+  width: 100%;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.etwArtifact__btnHelp {
+  width: 32px;
+  border: solid 1px;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+}
+
+.help-btn:hover {
+  transform: scale(1.05);
+  background-color: #66f387;
+}
+
+.etwArtifact__help-msg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e0eb;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: 0.7s transform;
+}
+
+.etwArtifact__help-msg-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.etwArtifact__help-msg-btnClose {
+  border-radius: 0.25rem;
+  position: absolute;
+  right: 0;
+  margin: 10px;
+}
+
+.btnCloseMsg::after {
+  color: #000000;
+  content: "\00AB";
+  font-size: 40px;
+  position: relative;
+  top: -14px;
+}
+
+.etwArtifact__help-msg-textHelp {
+  margin-top: 50px;
+  padding: 8px;
+  font-weight: 700;
+}
+
+.etwArtifact__Board {
+  margin-bottom: 4px;
+  height: 450px;
+  min-height: 240px;
+}
+
+.etwArtifact__elements {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #555;
+  border-radius: 0.2rem;
+}
+
+.etwArtifact__btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  border: 1px solid #000000;
+}
+
+.input-for-way {
+  min-width: 40px;
+  width: 100%;
+  display: flex;
+  max-width: inherit;
+  padding: 1px 4px;
+  background-color: #fefefe;
+  border: 1px solid #bbbf;
+  border-radius: 0.2em;
+  font-size: 18px;
+}
+
+.input-for-way--default {
+  background-color: #efefef;
+  padding: 1px 11px;
+}
+
+.input-for-way:hover {
+  border: 0.5px solid #3e84ed;
+}
+
+.input-for-way:focus {
+  border: 0.5px solid #3e84ed;
+  outline: none;
+}
+
+.titleWayName {
+  font-size: 17px;
+  font-weight: 700;
+  padding: 2px;
+}
+
+.fieldNameInput {
+  display: flex;
+  width: 50%;
+  font-size: 22px;
+  border: 1.5px solid #222222;
+  border-radius: 0.2em;
+  margin-left: 0.5em;
+  margin-bottom: 4px;
+  margin: 4px;
+  padding-left: 1px;
+  justify-content: center;
+}
+
+.fieldNameInput:hover {
+  border-color: #3e84ed;
+}
+
+.fieldNameInput:focus {
+  border-color: #3e84ed;
+  padding-left: 5px;
+  outline: none;
+}
+
+@media screen and (max-width: 400px) {
+  .contenTest {
+    display: block;
+  }
+
+  .etwArtifact {
+    width: 340px;
+    height: 200px;
+    min-height: 350px;
+
+    max-height: 300px;
+  }
+
+  .exampleETW .etwArtifact {
+    min-height: 508px;
+    width: 95%;
+  }
+
+  .etwArtifact__elements {
+    font-size: 16px;
+  }
+
+  .etwArtifact__Board {
+    min-height: 200px;
+  }
+
+  .titleWayName {
+    font-size: 14px;
+  }
+
+  .fieldNameInput {
+    height: 35px;
+  }
+
+  .fieldNameInput {
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .etwArtifact {
+    width: 270px;
+  }
+}
+
+/*CSS del contenedor de config*/
+.divConfig {
+  display: block !important;
+  min-width: 100;
+  max-width: 280px;
+  width: 90%;
+  height: 170px;
+  box-shadow: 1px 1px 4px black;
+  background-color: rgb(199, 199, 199);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.curvesBar {
+  display: flex !important;
+  justify-content: space-around !important;
+  width: max-content;
+}
+
+.curvesBar button {
+  width: 30px !important;
+  height: 30px !important;
+  background-color: #e3e3e3;
+  box-shadow: 1px 1px 4px black;
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 1px 1px 4px rgba(191, 191, 191, 0);
+}
+
+.curvesBar img {
+  width: 15px !important;
+  height: 25px;
+}
+
+.divConfig p {
+  margin: 0;
+}
+
+.divConfig li {
+  height: 30px;
+}
+
+.divConfig ul {
+  line-height: 1;
+  margin-left: 20px;
+}
+
+.configTop {
+  display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+}
+
+.configTop p {
+  font-weight: bold;
+}
+
+.configBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.curvesBar {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.buttonOptions button {
+  border: none !important;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px !important;
+}
+
+.buttonOption img {
+  color: white;
+}
+
+.configBottom p {
+  font-size: small;
+}
+
+.colorConfig {
+  width: 20px;
+  /* Ajusta el ancho según tus necesidades */
+  height: 20px;
+  /* Ajusta la altura según tus necesidades */
+  border: none;
+  /* Elimina el borde */
+  padding: 0;
+  /* Elimina cualquier relleno que pueda afectar la forma circular */
+  appearance: none;
+  /* Elimina la apariencia predeterminada del color picker */
+  background: none;
+  /* Elimina el fondo */
+}
+
+.colorConfig::-webkit-color-swatch-wrapper {
+  border: none;
+  /* Elimina el borde del recuadro interno */
+  border-radius: 50%;
+  /* Hace que el recuadro interno sea circular */
+  padding: 0;
+  /* Elimina cualquier relleno que pueda afectar la forma circular */
+}
+
+.colorConfig::-webkit-color-swatch {
+  border: none;
+  /* Elimina el borde del recuadro interno */
+  border-radius: 50%;
+  /* Hace que el recuadro interno sea circular */
+  padding: 0;
+  /* Elimina cualquier relleno que pueda afectar la forma circular */
+}
+
+.colorConfig:active {
+  transform: scale(0.88);
+  box-shadow: 1px 1px 4px black;
+}
+
+.rangeConfig {
+  /* height: 90%; */
+
+  border-radius: 20px;
+  width: 100px;
+  writing-mode: bt-lr;
+  /* IE */
+  /* -webkit-appearance: slider-vertical;  Chromium */
+  padding: 0 5px;
+}
+
+.inputCap0 {
+  /* inputs para el cap 0 */
+  overflow: hidden;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 13px;
+  height: 40px;
+  text-align: center;
+  min-width: 45px;
+  max-width: 50px;
+}
+
+/***Estilos del cap_3****/
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.borderDefault {
+  border: 2px solid rgb(100, 172, 255);
+  border-radius: 0.5rem;
+}
+
+.artifactGrid {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  /*    grid-template-columns: 70px 80px 80px 70px;
+   grid-template-rows: 80px 80px 80px 80px 80px; */
+  grid-template-areas:
+    ". rounded-0 rounded-0 ."
+    "square-0 . arrowD-0 ."
+    ". rounded-1  rounded-1 ."
+    "square-1 . arrowD-1 ."
+    ".  rounded-2 rounded-2 ."
+    "divControllerButton divControllerButton divControllerButton divControllerButton";
+}
+
+.artifactGrid_1 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 10px 80px 80px 80px 80px 10px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px;
+  grid-template-areas:
+    ". . rounded-0 rounded-0 . ."
+    ". square-0 . arrowD-0 . ."
+    ". . rounded-1  rounded-1 . ."
+    ". square-1 . arrowD-1 . ."
+    ". . rounded-2 rounded-2 . ."
+    ". solution-0 solution-0 solution-0 solution-0 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.artifactGrid_2 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 8px 70px 70px 70px 70px 8px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px;
+  grid-template-areas:
+    ". equation-0 equation-0 equation-0 equation-0 ."
+    ". . rounded-0 rounded-0 . ."
+    ". square-0 . arrowD-0 . ."
+    ". . rounded-1  rounded-1 . ."
+    ". square-1 . arrowD-1 . ."
+    ". . rounded-2 rounded-2 . ."
+    ". solution-1 solution-1 solution-1 solution-1 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.roundedArtic-0 {
+  grid-area: rounded-0;
+}
+
+.roundedArtic-1 {
+  grid-area: rounded-1;
+}
+
+.roundedArtic-2 {
+  grid-area: rounded-2;
+}
+
+.square-0 {
+  grid-area: square-0;
+}
+
+.square-1 {
+  grid-area: square-1;
+}
+
+.arrowD-0 {
+  grid-area: arrowD-0;
+}
+
+.arrowD-1 {
+  grid-area: arrowD-1;
+}
+
+.solution-0 {
+  grid-area: solution-0;
+}
+
+.divControllerButton {
+  grid-area: divControllerButton;
+}
+
+.artifactGridSimple {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px 80px;
+  grid-template-areas:
+    ". rounded-0 rounded-0 ."
+    "square-0 . arrowD-0 ."
+    ". rounded-1  rounded-1 ."
+    "divControllerButton divControllerButton divControllerButton divControllerButton";
+}
+
+.roundedArtic-0 {
+  grid-area: rounded-0;
+}
+
+.roundedArtic-1 {
+  grid-area: rounded-1;
+}
+
+.square-1 {
+  grid-area: square-1;
+  /* margin-left: 0.5rem; */
+}
+
+.arrowD-0 {
+  grid-area: arrowD-0;
+}
+
+.form_1 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-areas:
+    ". rounded-0 rounded-0 ."
+    "square-0 . arrowD-0 ."
+    ". rounded-1  rounded-1 ."
+    "square-1 . arrowD-1 ."
+    ".  rounded-2 rounded-2 ."
+    "square-2 . arrowD-2 ."
+    ".  rounded-3 rounded-3 ."
+    "square-3 . arrowD-3 ."
+    ".  rounded-4 rounded-4 ."
+    "divControllerButton divControllerButton divControllerButton divControllerButton";
+}
+
+.roundedArtic-0 {
+  grid-area: rounded-0;
+}
+
+.roundedArtic-1 {
+  grid-area: rounded-1;
+}
+
+.roundedArtic-2 {
+  grid-area: rounded-2;
+}
+
+.roundedArtic-3 {
+  grid-area: rounded-3;
+}
+
+.roundedArtic-4 {
+  grid-area: rounded-4;
+}
+
+.square-0 {
+  grid-area: square-0;
+  /* margin-left: 0.5rem; */
+}
+
+.square-1 {
+  grid-area: square-1;
+  /* margin-left: 0.5rem; */
+}
+
+.square-2 {
+  grid-area: square-2;
+  /* margin-left: 0.5rem; */
+}
+
+.square-3 {
+  grid-area: square-3;
+  /* margin-left: 0.5rem; */
+}
+
+.arrowD-0 {
+  grid-area: arrowD-0;
+}
+
+.arrowD-1 {
+  grid-area: arrowD-1;
+}
+
+.arrowD-2 {
+  grid-area: arrowD-2;
+}
+
+.arrowD-3 {
+  grid-area: arrowD-3;
+}
+
+.divControllerButton {
+  grid-area: divControllerButton;
+}
+
+.form_2 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-areas:
+    ". equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 ."
+    ". rounded-0 rounded-0 rounded-0 rounded-0 rounded-1 rounded-1 rounded-1 rounded-1 ."
+    ". square-0 square-0 arrowD-0 . arrowD-1 . square-1 square-1 ."
+    ". rounded-2 rounded-2 rounded-2 rounded-2 rounded-3 rounded-3 rounded-3 rounded-3 ."
+    ". square-2 square-2 arrowD-2 . arrowD-3 . square-3 square-3 ."
+    ". rounded-4 rounded-4 rounded-4 rounded-4 rounded-5 rounded-5 rounded-5 rounded-5 ."
+    ". square-4 square-4 arrowD-4 . arrowD-5 . square-5 square-5 ."
+    ". rounded-6 rounded-6 rounded-6 rounded-6 rounded-7 rounded-7 rounded-7 rounded-7 ."
+    ". square-6 square-6 arrowD-6 . arrowD-7 . square-7 square-7 ."
+    ". rounded-8 rounded-8 rounded-8 rounded-8 rounded-9 rounded-9 rounded-9 rounded-9 ."
+    ". solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.simplify_1 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 10px 80px 40px 20px 20px 20px 20px 40px 80px 10px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px;
+  grid-template-areas:
+    ". equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 ."
+    ". rounded-0 rounded-0 rounded-0 rounded-0 rounded-1 rounded-1 rounded-1 rounded-1 ."
+    ". square-0 square-0 arrowD-0 . arrowD-1 . square-1 square-1 ."
+    ". rounded-2 rounded-2 rounded-2 rounded-2 rounded-3 rounded-3 rounded-3 rounded-3 ."
+    ". square-2 square-2 arrowD-2 . arrowD-3 . square-3 square-3 ."
+    ". rounded-4 rounded-4 rounded-4 rounded-4 rounded-5 rounded-5 rounded-5 rounded-5 ."
+    ". square-4 square-4 arrowD-4 . arrowD-5 . square-5 square-5 ."
+    ". rounded-6 rounded-6 rounded-6 rounded-6 rounded-7 rounded-7 rounded-7 rounded-7 ."
+    ". solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.simplify_2 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 10px 80px 40px 20px 20px 20px 20px 40px 80px 10px;
+  grid-template-rows: 80px 80px 80px 80px;
+  grid-template-areas:
+    ". equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 ."
+    ". rounded-0 rounded-0 rounded-0 rounded-0 rounded-1 rounded-1 rounded-1 rounded-1 ."
+    ". square-0 square-0 arrowD-0 . arrowD-1 . square-1 square-1 ."
+    ". rounded-2 rounded-2 rounded-2 rounded-2 rounded-3 rounded-3 rounded-3 rounded-3 ."
+    ". square-2 square-2 arrowD-2 . arrowD-3 . square-3 square-3 ."
+    ". rounded-4 rounded-4 rounded-4 rounded-4 rounded-5 rounded-5 rounded-5 rounded-5 ."
+    ". solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.simplify_3 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(2000px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-areas:
+    ". rounded-0 rounded-0 rounded-0 rounded-0 rounded-1 rounded-1 rounded-1 rounded-1 ."
+    ". square-0 square-0 arrowD-0 . arrowD-1 . square-1 square-1 ."
+    ". rounded-2 rounded-2 rounded-2 rounded-2 rounded-3 rounded-3 rounded-3 rounded-3 ."
+    ". square-2 square-2 arrowD-2 . arrowD-3 . square-3 square-3 ."
+    ". rounded-4 rounded-4 rounded-4 rounded-4 rounded-5 rounded-5 rounded-5 rounded-5 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.simplify_4 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 10px 80px 40px 20px 20px 20px 20px 40px 80px 10px;
+  grid-template-rows: 80px 80px;
+  grid-template-areas:
+    ". equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 ."
+    ". rounded-0 rounded-0 rounded-0 rounded-0 rounded-1 rounded-1 rounded-1 rounded-1 ."
+    ". solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.simplify_5 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 10px 80px 40px 20px 20px 20px 20px 40px 80px 10px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px;
+  grid-template-areas:
+    ". equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 ."
+    ". rounded-0 rounded-0 rounded-0 rounded-0 rounded-1 rounded-1 rounded-1 rounded-1 ."
+    ". square-0 square-0 arrowD-0 . arrowD-1 . square-1 square-1 ."
+    ". rounded-2 rounded-2 rounded-2 rounded-2 rounded-3 rounded-3 rounded-3 rounded-3 ."
+    ". square-2 square-2 arrowD-2 . arrowD-3 . square-3 square-3 ."
+    ". rounded-4 rounded-4 rounded-4 rounded-4 rounded-5 rounded-5 rounded-5 rounded-5 ."
+    ". square-4 square-4 arrowD-4 . arrowD-5 . square-5 square-5 ."
+    ". rounded-6 rounded-6 rounded-6 rounded-6 rounded-7 rounded-7 rounded-7 rounded-7 ."
+    ". solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.simplify_6 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 10px 80px 40px 20px 20px 20px 20px 40px 80px 10px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-areas:
+    ". . rounded-0 rounded-0 rounded-0 rounded-0 rounded-0 rounded-0 . ."
+    ". square-0 square-0 square-0 . arrowD-0 arrowD-0 arrowD-0 arrowD-0 ."
+    ". . rounded-1 rounded-1 rounded-1 rounded-1 rounded-1 rounded-1 . ."
+    ". square-1 square-1 square-1 . arrowD-1 arrowD-1 arrowD-1 arrowD-1 ."
+    ". . rounded-2 rounded-2 rounded-2 rounded-2 rounded-2 rounded-2 . ."
+    ". square-2 square-2 square-2 . arrowD-2 arrowD-2 arrowD-2 arrowD-2 ."
+    ". . rounded-3 rounded-3 rounded-3 rounded-3 rounded-3 rounded-3 . ."
+    ". solution-0 solution-0 solution-0 solution-0 solution-0 solution-0 solution-0 solution-0 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.simplify_7 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 20px 50px 80px 80px 50px 20px;
+  grid-template-rows: 80px 80px 80px 80px 80px;
+  grid-template-areas:
+    ". . rounded-0 rounded-0 . ."
+    ". square-0 . arrowD-0 . ."
+    ". . rounded-1  rounded-1 . ."
+    ". . . arrowD-1 . ."
+    ". solution-0 solution-0 solution-0 solution-0 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.roundedArtic-0 {
+  grid-area: rounded-0;
+}
+
+.roundedArtic-1 {
+  grid-area: rounded-1;
+}
+
+.roundedArtic-2 {
+  grid-area: rounded-2;
+}
+
+.roundedArtic-3 {
+  grid-area: rounded-3;
+}
+
+.roundedArtic-4 {
+  grid-area: rounded-4;
+}
+
+.roundedArtic-5 {
+  grid-area: rounded-5;
+}
+
+.roundedArtic-6 {
+  grid-area: rounded-6;
+}
+
+.roundedArtic-7 {
+  grid-area: rounded-7;
+}
+
+.roundedArtic-8 {
+  grid-area: rounded-8;
+}
+
+.roundedArtic-9 {
+  grid-area: rounded-9;
+}
+
+.square-0 {
+  grid-area: square-0;
+}
+
+.square-1 {
+  grid-area: square-1;
+}
+
+.square-2 {
+  grid-area: square-2;
+}
+
+.square-3 {
+  grid-area: square-3;
+}
+
+.square-4 {
+  grid-area: square-4;
+}
+
+.square-5 {
+  grid-area: square-5;
+}
+
+.square-6 {
+  grid-area: square-6;
+  /* margin-left: 0.5rem; */
+}
+
+.square-7 {
+  grid-area: square-7;
+}
+
+.arrowD-0 {
+  grid-area: arrowD-0;
+  width: 40px !important;
+}
+
+.arrowD-1 {
+  grid-area: arrowD-1;
+  width: 40px !important;
+}
+
+.arrowD-2 {
+  grid-area: arrowD-2;
+  width: 40px !important;
+}
+
+.arrowD-3 {
+  grid-area: arrowD-3;
+  width: 40px !important;
+}
+
+.arrowD-4 {
+  grid-area: arrowD-4;
+  width: 40px !important;
+}
+
+.arrowD-5 {
+  grid-area: arrowD-5;
+  width: 40px !important;
+}
+
+.arrowD-6 {
+  grid-area: arrowD-6;
+  width: 40px !important;
+}
+
+.arrowD-7 {
+  grid-area: arrowD-7;
+  width: 40px !important;
+}
+
+.divInputVF {
+  grid-area: divInputVF;
+}
+
+.divControllerButton {
+  grid-area: divControllerButton;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowUp::after {
+  color: black;
+  content: "\2191";
+  font-size: 50px;
+}
+
+.arrowDown::after {
+  color: black;
+  content: "\2193";
+  font-size: 50px;
+}
+
+.pass {
+  background-color: rgba(73, 225, 94, 0.4) !important;
+}
+
+.failed {
+  background-color: rgba(203, 78, 31, 0.4) !important;
+}
+
+.math {
+  width: 100%;
+  font-size: 1rem;
+  text-align: center !important;
+}
+
+.divControllerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screenDouble-0,
+.screenDouble-2,
+.screenDouble-4,
+.screenDouble-6,
+.screenDouble-8 {
+  border-radius: 2rem 0 0 2rem !important;
+}
+
+.screenDouble-1,
+.screenDouble-3,
+.screenDouble-5,
+.screenDouble-7,
+.screenDouble-9 {
+  border-radius: 0 2rem 2rem 0 !important;
+}
+
+.form_4 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 80px 80px 80px 80px;
+  grid-template-rows: 60px 60px 60px 60px 60px 60px 60px;
+  grid-template-areas:
+    ". rounded-0 rounded-0 ."
+    "square-0 . arrowD-0 ."
+    ". rounded-1  rounded-1 ."
+    "square-1 . arrowD-1 ."
+    ".  rounded-2 rounded-2 ."
+    "square-2 . arrowD-2 ."
+    ".  rounded-3 rounded-3 ."
+    "square-3 . arrowD-3 ."
+    "divControllerButton divControllerButton divControllerButton divControllerButton";
+}
+
+.roundedArtic-0 {
+  grid-area: rounded-0;
+}
+
+.roundedArtic-1 {
+  grid-area: rounded-1;
+}
+
+.roundedArtic-2 {
+  grid-area: rounded-2;
+}
+
+.roundedArtic-3 {
+  grid-area: rounded-3;
+}
+
+.roundedArtic-4 {
+  grid-area: rounded-4;
+}
+
+.square-0 {
+  grid-area: square-0;
+}
+
+.square-1 {
+  grid-area: square-1;
+}
+
+.square-2 {
+  grid-area: square-2;
+}
+
+.square-3 {
+  grid-area: square-3;
+}
+
+.arrowD-0 {
+  grid-area: arrowD-0;
+}
+
+.arrowD-1 {
+  grid-area: arrowD-1;
+}
+
+.arrowD-2 {
+  grid-area: arrowD-2;
+}
+
+.arrowD-3 {
+  grid-area: arrowD-3;
+}
+
+.form_5 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-self: center;
+  grid-template-columns: 90px 65px 65px 90px;
+  grid-template-rows: 80px 80px 80px 80px;
+  grid-template-areas:
+    ". rounded-0 rounded-0 ."
+    "square-0 arrowD-0 arrowD-1 square-1"
+    ". rounded-1  rounded-1 ."
+    "divControllerButton divControllerButton divControllerButton divControllerButton";
+}
+
+.roundedArtic-0 {
+  grid-area: rounded-0;
+}
+
+.roundedArtic-1 {
+  grid-area: rounded-1;
+}
+
+.arrowD-0 {
+  grid-area: arrowD-0;
+  /* margin-left: 25px; */
+}
+
+.arrowD-1 {
+  grid-area: arrowD-1;
+  /*  margin-left: 20px; */
+}
+
+.square-0 {
+  grid-area: square-0;
+  /* margin-left: 0.5rem; */
+}
+
+.square-1 {
+  grid-area: square-1;
+  /* margin-left: 0.5rem; */
+}
+
+.equation-0 {
+  grid-area: equation-0;
+}
+
+.solution-1 {
+  grid-area: solution-1;
+}
+
+.divControllerButton {
+  grid-area: divControllerButton;
+}
+
+.form_6 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-areas:
+    ". equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 equation-0 ."
+    ". rounded-0 rounded-0 rounded-0 rounded-0 rounded-1 rounded-1 rounded-1 rounded-1 ."
+    ". square-0 square-0 arrowD-0 . arrowD-1 . square-1 square-1 ."
+    ". rounded-2 rounded-2 rounded-2 rounded-2 rounded-3 rounded-3 rounded-3 rounded-3 ."
+    ". solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 solution-1 ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.divInputVF {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+/* Format clean list */
+.formatList {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 2.5rem;
+}
+
+/* Content Form MathInput */
+.contetMathInput {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contentTitleParagraph {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.itemMargin-2 {
+  margin: 4px;
+}
+
+.itemMarginLeft-2 {
+  margin-left: 0.5rem;
+}
+
+.inputExample {
+  width: 225px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.mathExample {
+  width: 100%;
+  font-size: 2em;
+  text-align: center !important;
+}
+
+.mathExampleText {
+  width: 100%;
+  font-size: 1em;
+  opacity: 1;
+}
+
+.mathExampleTextExample {
+  margin: 0.5rem;
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.divAlignSingle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-radio {
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+/* cap_1 */
+.board-validation-curves {
+  max-width: 302px;
+  min-width: 200px;
+  width: 302px;
+}
+
+.contentCol {
+  display: flex;
+  width: 50%;
+  position: relative;
+}
+
+.contentCol > label {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#title {
+  font-weight: 700;
+  /* text-decoration: underline;
+  text-transform: capitalize; */
+}
+
+.toValidate {
+  overflow: hidden;
+  align-self: flex-start;
+  height: 30px;
+  min-width: 30px;
+  max-width: inherit;
+  margin-left: 4px;
+  border: none;
+  /* border-bottom: 1px solid #333; */
+  background-color: #f7f7f7;
+  padding-bottom: 0;
+  transition: height 0.3s;
+  font-size: 16px;
+  flex-flow: 1;
+  width: 95%;
+}
+
+.toValidate:hover {
+  /* border: 1px solid #999; */
+  border-bottom: 1px solid #333;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.toValidate:focus {
+  font-size: 18px;
+  height: 40px;
+  display: block;
+  position: relative;
+  /*  max-width: 150px; */
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+/* Raul */
+
+/* Styles del arbol binario */
+.borderContentSize {
+  width: auto;
+  min-width: 300px;
+  margin: 8px;
+}
+
+.contentSize {
+  width: 50%;
+}
+
+.circleMathfield {
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 200px;
+  height: 50px;
+}
+
+.squareMathfield {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  margin: 4px;
+}
+
+.nodeOperation {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+.divInferior {
+  display: flex;
+  flex-direction: row;
+}
+
+.treeLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.treeRigth {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.treeCenter {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.treeOperator {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.treeOperatorDuo {
+  display: flex;
+  flex-direction: column;
+  background-color: #006ebb;
+}
+
+.borderOperator {
+  width: 50%;
+  height: 100%;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.result {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 200px;
+  height: 50px;
+}
+
+.sym {
+  width: 30px;
+  height: 30px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemSym {
+  border: 1px solid black;
+}
+
+.content {
+  width: 100%;
+}
+
+/**Raul**/
+@media only screen and (max-width: 760px) {
+  .contentCol {
+    display: block !important;
+  }
+}
+
+.labelContainer {
+  width: 100%;
+}
+
+/* Efecto para verificar que ya el campo esta correcta o incorrecto*/
+.bounce {
+  animation: bounce-effect 1s ease-in-out;
+}
+
+@keyframes bounce-effect {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  60% {
+    transform: translateY(-2.5px);
+  }
+}
+
+/* engineLayout */
+.test {
+  min-width: 100px;
+  min-height: 300px;
+  padding: 0;
+}
+
+.cont {
+  width: 90%;
+  min-width: 100px;
+  box-sizing: border-box;
+  margin: 10px auto;
+}
+
+.subcontainer {
+  width: 40%;
+  height: auto;
+  margin: 10px;
+}
+
+#x {
+  height: 400px;
+  background-color: #f8f9fa;
+}
+
+.columns {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.columns2 {
+  display: flex;
+}
+
+.c-1 {
+  width: 100%;
+}
+
+.c-2 {
+  width: calc(95% / 2);
+}
+
+.c-4 {
+  width: calc(95% / 3);
+}
+
+.c-3 {
+  width: calc(95% / 3);
+}
+
+.c-4 {
+  width: calc(95% / 4);
+}
+
+.c-5 {
+  width: calc(95% / 5);
+}
+
+.c-6 {
+  width: calc(95% / 6);
+}
+
+.c-7 {
+  width: calc(95% / 7);
+}
+
+.c-8 {
+  width: calc(95% / 8);
+}
+
+.c-9 {
+  width: calc(95% / 9);
+}
+
+.c-10 {
+  width: calc(95% / 10);
+}
+
+.c-11 {
+  width: calc(95% / 11);
+}
+
+.c-12 {
+  width: calc(95% / 12);
+}
+
+.c-13 {
+  width: calc(95% / 13);
+}
+
+.c-14 {
+  width: calc(95% / 14);
+}
+
+.c-15 {
+  width: calc(95% / 15);
+}
+
+.c-16 {
+  width: calc(95% / 16);
+}
+
+.c-17 {
+  width: calc(95% / 17);
+}
+
+.c-18 {
+  width: calc(95% / 18);
+}
+
+.c-19 {
+  width: calc(95% / 19);
+}
+
+.c-20 {
+  width: calc(95% / 20);
+}
+
+@media only screen and (max-width: 700px) {
+  .columns {
+    flex-wrap: wrap;
+  }
+
+  .subcontainer {
+    display: block;
+  }
+
+  .cont {
+    width: 70%;
+    margin: auto;
+  }
+
+  .c-2 {
+    margin: 5px;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* engineLayout */
+
+.tablaHeight {
+  height: 35px;
+  max-width: 200px;
+}
+
+.borderMathField {
+  border: 1px solid #006ebb;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.borderMathField:hover {
+  transform: scale(1.05);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.progressContainer {
+  width: 70%;
+  text-align: center;
+  /* background-color: #f7f7f7; */
+  background-color: #eaebf5;
+  /* border-radius: 0;
+   border-bottom-left-radius: .2rem;
+   border-bottom-right-radius: .2rem; */
+  /* margin-top: 20px; */
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  /*  display: flex; */
+  display: none;
+  flex-wrap: wrap;
+
+  position: relative;
+  outline: 3px solid #d3d1d1;
+
+  top: 0px;
+  /* flex-direction: column; */
+  padding-bottom: 5px;
+  transition: width 0.2s;
+}
+
+.progressContainer[data-maximize="false"] {
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.progressContainer[data-maximize="false"]:hover {
+  transform: scale(1.1);
+}
+
+.progressBar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background: conic-gradient(#1aa3e8 0deg, #fff 0deg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 7px 20px -5px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 0px 7px 20px -5px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 0px 7px 20px -5px rgba(0, 0, 0, 0.54);
+}
+
+.progressBar__circle {
+  width: 80%;
+  height: 80%;
+  background-color: #f7f7f7;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #d4d3d3;
+}
+
+.progressBar__number {
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.progressElement {
+  width: 80%;
+  align-content: center;
+}
+
+.progressElement[data-type="listSucces"] {
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  transition: transform 0.5s;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.heightAuto {
+  height: auto !important;
+}
+
+.minContentProgrees {
+  width: 32px;
+  height: 28px;
+  top: 10vh;
+  right: 20px;
+  position: absolute;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.minContentProgrees::before {
+  content: "\21F1";
+  background-color: #eaebf5;
+
+  transform: rotate(-90deg);
+  color: rgb(117, 177, 245);
+  font-size: 20px;
+  margin-left: 8px;
+  margin-top: 4px;
+  z-index: 300;
+  cursor: pointer;
+  text-align: center;
+}
+
+.minContent {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.contentProgress {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+
+  margin: auto;
+}
+
+.minContent:hover {
+  background-color: #e0e0e0;
+}
+
+/*  .progressElement[data-type='listSucces']::before {
+     content: '';
+     font-size: 16px;
+     letter-spacing: .5px;
+     padding-bottom: 20px;
+   }
+   */
+.progressBarText {
+  padding: 2px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.containerLinealProgress {
+  display: flex;
+  margin-top: 10px;
+}
+
+.linealProgress {
+  width: 98%;
+  height: 20px;
+  background-color: #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 4px solid #a1a0a0;
+  position: relative;
+}
+
+.linealProgress__progress {
+  width: 20%;
+  background-color: #38d414;
+  height: 100%;
+}
+
+.linealProgress__number {
+  display: inline-block;
+  margin-left: 5px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.linealProgress__percent {
+  display: inline-block;
+  background-color: #fff;
+  height: 20px;
+  opacity: 0.85;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 200;
+  padding-left: 10px;
+  padding-right: 5px;
+  backdrop-filter: blur(10px);
+  letter-spacing: 1px;
+}
+
+.containerListSuccess {
+  width: 20%;
+}
+
+.artifactTrue {
+  scroll-margin-top: 100px;
+  border: 3.5px solid #00ff11 !important;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.moreList {
+  width: 100%;
+  height: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #e0e0e0;
+}
+
+.moreList:hover {
+  background-color: #e0e0e0;
+}
+
+.moreList:active {
+  background-color: #9b9898;
+}
+
+.user {
+  width: 100%;
+  padding: 4px 0;
+  margin-top: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  position: relative;
+  border-bottom: 0.5px solid #d9dbfa;
+  margin-bottom: 8px;
+}
+
+.user::before {
+  content: "\1F393";
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.min_progress {
+  position: absolute;
+  right: 4px;
+  cursor: pointer;
+}
+
+.min_progress::after {
+  content: "\2716";
+}
+
+.min_progress:hover {
+  color: #30507e;
+}
+
+.upIcon::after {
+  box-sizing: border-box;
+  content: "\25BC";
+
+  color: #555;
+}
+
+.upIcon--white {
+  color: #cecece;
+}
+
+.upIcon {
+  margin: auto;
+  border-radius: 10px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+.fixedBar {
+  z-index: 10000;
+  position: fixed;
+}
+
+.fixedBar--open {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 4.5em;
+  /*   
+   outline: none;
+   border: 3px solid #d3d1d1;
+   border-top: none;
+   width: 350px;
+   text-align: center;  */
+}
+
+.fixedBar--closed {
+}
+
+.listArtifactSuccess {
+  background-color: #d0d6eb;
+  padding-top: 5px;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.successArtifact__item a {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-top: 2px;
+}
+
+.successArtifact__item a:hover {
+  color: #a1a0a0;
+}
+
+@media only screen and (max-width: 900px) {
+  .successArtifact__item a {
+    font-size: 12px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #1f2937;
+    letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .progressElement {
+    width: 60%;
+  }
+
+  .containerListSuccess {
+    font-size: 12px;
+
+    margin-left: 5px;
+    width: 38%;
+  }
+}
+
+.newContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newClone {
+  margin: 0px;
+  padding: 0px;
+  max-width: 280px;
+}
+
+.margen-top-25 {
+  margin-top: 25px;
+}
+
+.newBoardSize {
+  max-width: 340px;
+}
+
+.newTableTD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.newSizeMath {
+  max-height: 35px !important;
+  max-width: 130px !important;
+  min-width: 130px !important;
+}
+
+.newArtifactFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+}
+
+.newTbody {
+  min-height: 40px;
+  max-height: 40px;
+}
+
+/*estilo para capitulo dos pagina 18 primer board para que sea responsivo*/
+.productR {
+  width: 600px !important;
+  height: 400px !important;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 720px) {
+  .productR {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .productR {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
+
+/*--------------*/
+
+.img14 {
+  max-width: 100%;
+  margin-right: 10px;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+.rContainer {
+  border-radius: 20px;
+  width: 360px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.rGrafica {
+  height: 300px;
+  width: 335px;
+}
+
+@media (max-width: 300px) {
+  .rContainer {
+    width: 275px;
+  }
+
+  .rGrafica {
+    height: 200px;
+    width: 272px;
+  }
+}
+
+@media (max-width: 320px) {
+  .rContainer {
+    width: 300px;
+  }
+
+  .rGrafica {
+    height: 200px;
+    width: 272px;
+  }
+}
+
+.rEncunciado_container {
+  width: 100%;
+  height: 25px;
+}
+
+.rEnunciado {
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.rBotones {
+  margin-top: 5px;
+  padding: 2px;
+}
+
+.rBtns {
+  font-family: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media query para pantallas de 320px */
+@media screen and (max-width: 320px) {
+  /* Estilos para los botones en pantallas de 320px */
+  .rBtns {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+.rSelectRoad {
+  color: black;
+  border: #000 2p;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rSelectRoad option {
+  font-size: 25px;
+  text-align: center;
+}
+
+/*Contenedor de botones de caminos*/
+.rButtons_paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2px;
+  padding: 2px;
+
+  justify-items: center;
+  align-items: center;
+}
+
+/*Botones de caminos con flechas==================*/
+.rUp_arrow,
+.rLeft_arrow,
+.rDown_arrow,
+.rRight_arrow {
+  position: relative;
+  color: var(--color, black);
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 30px;
+  width: 35px;
+  height: 35px;
+  background-color: gainsboro;
+  border: 1px solid black;
+  border-radius: 5px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.rRight_arrow {
+  align-content: center;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.rLeft_arrow {
+  align-content: center;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.rDown_arrow {
+  align-content: center;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* inicode de arrows */
+.rDown_arrow::after {
+  content: "\002193";
+}
+
+.rLeft_arrow::after {
+  content: "\002190";
+  position: relative;
+  top: -4px;
+}
+
+.rRight_arrow::after {
+  position: relative;
+  top: -4px;
+  content: "\002192";
+}
+
+.rUp_arrow::after {
+  content: "\002191";
+}
+
+/* Estilos nuevos del capitulo 3 --- INICIO */
+.contentArtifactMath {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artifactShadowBoxHover:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+  box-shadow: rgba(1, 18, 54, 0.24) 0px 3px 8px;
+}
+
+.mathLeftMargin {
+  margin-left: 0.5rem;
+}
+
+.mathPaddingInput {
+  padding: 0.5rem;
+}
+
+.mathLeftRightMargin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.paddingMath {
+  padding: 0.4rem;
+}
+
+.mathSize {
+  max-width: 310px;
+  border: 1px solid black;
+  height: 50px;
+  border-radius: 0.2rem;
+}
+
+.mathPaddingTD {
+  padding: 0px !important;
+}
+
+.mathTr {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid gray;
+  border-radius: 0.5em;
+  margin-bottom: 0.2rem;
+}
+
+math-field[aria-disabled="false"]::part(content) {
+  width: 100%;
+}
+
+.artifactGridNew {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+  /*    grid-template-columns: 70px 80px 80px 70px;
+   grid-template-rows: 80px 80px 80px 80px 80px; */
+  grid-template-areas:
+    ". rounded-0 rounded-0 ."
+    "square-0 . arrowD-0 ."
+    ". rounded-1  rounded-1 ."
+    "square-1 . arrowD-1 ."
+    ".  rounded-2 rounded-2 ."
+    "divControllerButton divControllerButton divControllerButton divControllerButton";
+}
+
+.contentExampleNew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.contentExample {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.diagram {
+  width: 300px;
+  height: auto;
+}
+
+.diagramPart {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  justify-content: center;
+}
+
+.titleExample {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.backGroundTitle {
+  background-color: #d9d9d9;
+}
+
+.margen-12 {
+  margin: 12px;
+}
+
+.borderBottom {
+  border-bottom: 1px solid gray;
+}
+
+.contentWidth {
+  width: auto;
+}
+
+.exampleBorderNew {
+  border: 2px solid rgb(99 99 99);
+  border-radius: 0.5rem;
+}
+
+.centerOrder {
+  display: flex;
+  gap: 40px;
+}
+
+.artifactGridNew_2 {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(60px, 1fr));
+  /*    grid-template-columns: 70px 80px 80px 70px;
+   grid-template-rows: 80px 80px 80px 80px 80px; */
+  grid-template-areas:
+    ". rounded-0 rounded-0 . . ."
+    ". square-0 . arrowD-0 . ."
+    ". rounded-1  rounded-1 . . ."
+    ". square-1 . arrowD-1 . ."
+    "solution-0 solution-0 solution-0 solution-0 . ."
+    ". divControllerButton divControllerButton divControllerButton divControllerButton .";
+}
+
+.mathSizeWidth {
+  max-width: 140px;
+  min-width: 140px;
+  border: 1px solid black;
+  height: 50px;
+  border-radius: 0.2rem;
+}
+
+.fontTabla {
+  font-size: 0.9rem;
+}
+
+/* Estilos nuevos del capitulo 3 --- FIN */
+
+/* styles generic engines mod_g */
+
+.opcion-texto {
+  padding: 10px;
+}
+
+.Interactive {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.available-options {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: #e1e1e1;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: 1px solid #7b7b7b;
+  position: relative;
+  z-index: 9;
+}
+
+.displayOptions {
+  display: none;
+}
+
+.opcion-desplegable {
+  text-align: center;
+  justify-content: center;
+}
+
+.available-option {
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  box-shadow: 0 3px #999;
+
+  background-color: white;
+  justify-content: center;
+  border-radius: 4px;
+  margin-bottom: 1px;
+  align-items: center;
+  text-align: center;
+  margin-top: 1px;
+  display: flex;
+  cursor: pointer;
+  height: 35px;
+  width: 100%;
+  z-index: 3;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.punto-color {
+  justify-content: center;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  height: 10px;
+  width: 10px;
+}
+
+.color {
+  background-color: var(--roadColor, red);
+}
+
+.azul {
+  background-color: blue;
+}
+
+.black {
+  background-color: rgb(0, 0, 0);
+}
+
+.selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  .input-for-way {
+    font-size: 14px;
+
+    max-width: 60px;
+  }
+
+  .input-for-way:focus {
+    max-width: none;
+  }
+}
+
+/* ContainerVideos */
+.containerVideos {
+}
+
+.videos__content {
+  box-sizing: border-box;
+  max-width: 90%;
+  width: 70%;
+  height: 300px;
+  margin: auto;
+  border-radius: 0.5rem;
+  background-color: var(--blue1);
+  box-shadow: 1px 7px 17px 2px rgba(0, 0, 0, 0.55);
+}
+
+.videos__contentVideos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 20px;
+}
+
+.videos__card {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f4fcff;
+  border-radius: 0.2rem;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.videoElement {
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  height: 70%;
+  transition: transform 0.2s;
+  cursor: pointer;
+  border-bottom: 3px solid;
+}
+.videoElement source {
+  height: 100%;
+  width: 100%;
+}
+.videoElement:hover {
+  transform: scale(1.01);
+}
+
+.videos__title {
+  height: 10%;
+  width: 100%;
+  background-color: var();
+  padding-top: 5px;
+  padding-left: 5px;
+  color: var(--blue1);
+  border-top: 2px solid var(--orange1);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .videos__content {
+    width: 90%;
+    height: 400px;
+  }
+  .videos__contentVideos {
+    width: 100%;
+  }
+  .videos__card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .videos__contentVideos {
+    flex-direction: column;
+  }
+  .videos__contentVideos {
+    width: 100%;
+  }
+  .videos__card {
+    width: 100%;
+  }
+}

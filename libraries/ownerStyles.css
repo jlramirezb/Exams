@@ -1,0 +1,280 @@
+/* Contenedor de preguntas */
+
+.question{
+    outline: 1px solid rgb(168, 168, 168)  !important;
+    border-radius: 0.5rem !important;
+    min-width: 200px;
+    max-width: 500px;
+    /* width: fit-content !important; */
+    display:flex;
+    justify-content: center !important;
+    margin:0.5em !important;
+    overflow: hidden;
+}
+
+.table__mathfield{
+
+  min-width: 60px;
+}
+.question__content{
+  padding:30px !important ;
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+
+.question__content__table{
+  min-width: 200px !important;
+width: inherit !important;
+  padding:0px !important ;
+  height: auto;
+}
+.question:hover {
+  box-shadow: 7px 7px 7px 7px  rgba(159, 159, 159,0.20);
+}
+.question__footer{
+    width: 100%;
+    border-top:  1px solid rgb(168, 168, 168) !important;
+    border-radius: 0 0 10px 10px !important;
+    padding: 10px;
+    
+}
+table{
+  margin:0px !important
+}
+.question >  table{
+  padding: 0px !important;
+
+  margin-bottom: 0px;
+  width: 100%;
+  border-collapse: collapse;
+}
+table td{
+  padding-left:0.1em !important;
+  padding-right:0.1em !important;
+  vertical-align: middle !important; 
+  max-height:none;
+}
+/* .ML__container{
+  height: 500px !important;
+  background-color: blue !important;
+  border:1px !important;
+} */
+.question select{
+  max-width: none !important ;
+  border: none !important;
+  margin:0px !important;
+}
+.contentCol math-field{
+  background-color:  rgb(226, 226, 226) !important;
+  width: 100%;
+}
+
+/* td math-field{
+  max-width: none !important ;
+  margin:0px !important;
+
+} */
+table math-field{
+  border:0px !important;
+  background-color:  rgba(255, 255, 255, 0) !important;
+
+}
+ td {
+  margin: none !important;
+
+  align-items: middle !important;
+}
+td p{
+  display: flex;
+  justify-content: center;
+  margin: 0.6rem !important;
+
+  padding: none !important;
+}
+th span.ML_content{
+margin:0px !important;
+max-width: none;
+height: 400px !important;
+width: 100%;
+}
+
+td :focus{
+border:none !important;
+
+}
+@media screen and (max-width: 600px) {
+  td, option {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .question .input-for-way{
+    font-size: 15px !important; 
+    display: flex;
+    align-items: center;
+  }
+  td{
+    font-size: 15px !important; 
+  }
+}
+@media screen and (max-width: 400px) {
+  td,select,option {
+    padding: 0px;
+    font-size: 10px;
+  }
+  .question .input-for-way{
+    font-size: 15px !important; 
+    display: flex;
+    align-items: center;
+  }
+
+  td{
+    font-size: 10px !important; 
+  }
+}
+/* .question__footer__reset, .question__footer__check{
+    background-color: rgb(197, 197, 197) !important;
+}
+.reset::after{
+    color:rgb(116, 116, 116)
+}
+
+.check{
+    background-color: rgb(197, 197, 197) !important;
+}
+.check::after{
+    color:rgb(116, 116, 116)
+} */
+/* Contenedor de preguntas */
+
+
+
+/* Selects */
+
+.question .toValidate{
+  background-color:  rgb(226, 226, 226);
+width: 100%;
+}
+#selectq {
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+  }
+  #selectq {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #selectq label {
+    margin-bottom: 0.5rem;
+    margin: 0.5em !important;
+    font-weight: bold;
+
+  }
+  #selectq select {
+    width: 100% !important;
+    /* margin: 0.5em !important; */
+    border: 0px !important;
+    background-color:  rgb(226, 226, 226);
+    font-weight: bold;
+    background-position: right center;
+  }
+  
+  /* Selects */
+
+/* Radio */
+
+#radioContainer {
+  align-items: center;
+}
+ 
+ .title {
+
+  display: block !important;
+  justify-content: center;  
+  font-weight: bold;
+ }
+ 
+ .question__content .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center !important;
+ }
+ .content .radioRow{
+  width:100%;
+  display: flex;
+  justify-content: center;
+ }
+ .content .radioCol {
+  display: inline-block;
+
+width:fit-content !important;
+ }
+ 
+ .content input[type="radio"] {
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
+
+ }
+
+ /* Radio */
+
+
+  /* Input */
+  .templateInput{
+    padding:0.5rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+.templateInput #title {
+  text-decoration: none !important;
+}
+
+.templateInput #content {
+  display: flex;
+  justify-content: center;
+}
+.templateInput math-field{
+
+ border-bottom: none !important;
+ background-color:  rgba(255, 255, 255, 0) !important;
+ display: block !important;
+ width:200px;
+justify-content: center !important;
+  }
+  .inputContainer{
+    display: flex;
+    justify-content: center;
+  }
+  /* Estilos para los títulos */
+
+    /* Input */
+    td{
+      padding: 0px !important;
+      
+   }
+   select.input-for-way{
+      border-radius: 0px;
+      min-height: 45px !important;
+
+      border-bottom: rgba(108, 105, 105, 0.25) 1px solid !important;
+     
+    }
+
+
+  math{
+   font-size: 1.3em;
+   margin: 0.2em;
+  }
