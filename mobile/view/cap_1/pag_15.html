@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript" src="../../../libraries/jspdf.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/html2canvas.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/mathLive.js"></script>
+  <script type="text/javascript" src="../../../libraries/jsxgraphcore.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../../libraries/jsxgraph.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+  <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
+  <title></title>
+</head>
+
+<body>
+
+  <style>
+    @media only screen and (max-width: 350px) {
+      .short-board {
+        width: 250px !important;
+        height: 200px;
+
+      }
+    }
+  </style>
+
+  <!-- <nav class="mb-5 border-bottom border-dark ">
+      <div class="d-flex justify-content-between">
+         <p class="navbar-brand font-italic text-break">
+            Estudio de Curvas
+         </p>
+      </div>
+   </nav> -->
+  <div id="" class="containerNormal background-gray">
+    <h3>Estudio de Curvas</h3>
+    <hr>
+
+    <div id="mainOwner">
+
+    </div>
+
+    <div id="grid" class="d-flex  flex-wrap justify-content-center">
+
+    </div>
+
+    <template id="template">
+      <div class="content_1">
+        <div class="content_2">
+
+        </div>
+      </div>
+      <div class="newContent"> </div>
+
+    </template>
+  </div>
+
+  <!-- cap_1/:engineOwner,:cap_1/:boardDefault,:cap_1/:validationCurves -->
+  <script src="../../../engines/genericEngines/mod_G.js"></script>
+  <script src="../../../engines/genericEngines/progressEngine.js"></script>
+
+  <script src="../../../engines/cap_1/engineOwner.js"></script>
+  <script src="../../../engines/cap_1/boardDefault.js"></script>
+  <script src="../../../engines/cap_1/validationCurves.js"></script>
+  <script src="../../../definitions/cap_1/pag_15.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript" src="../../../libraries/jspdf.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/html2canvas.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/mathLive.js"></script>
+  <script type="text/javascript" src="../../../libraries/jsxgraphcore.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../../libraries/jsxgraph.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+
+  <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
+  <title></title>
+</head>
+
+<body onload="agregarParametro()">
+  <script>
+    function agregarParametro() {
+      console.log(window.location.search);
+      if (!window.location.search.includes("?cap=1&pag=6")) {
+        window.location.search += '?cap=1&pag=6';
+      };
+    }
+  </script>
+
+  <div class="containerNormal background-gray">
+    <h3> Estudio de Curvas</h3>
+    <hr>
+    <h2 class="superTitle"> PARTES CRECIENTES Y DECRECIENTES</h2>
+    <div id="mainOwner">
+      <div class="note">
+        <p>
+          Al desplazar un punto de izquierda a derecha sobre el eje x, si la curva "sube" se dice que la curva es
+          creciente en esa parte del eje x. Si la curva "baja" se dice que es decreciente (en esa parte del eje x).
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <template id="template">
+
+    <div class="content_1">
+      <div class="content_2">
+      </div>
+    </div>
+
+    <div class="newContent"> </div>
+  </template>
+
+
+  <script src="../../../engines/cap_1/engineOwner.js"></script>
+  <script src="../../../engines/cap_1/boardDefault.js"></script>
+  <script src="../../../engines/genericEngines/mod_G.js"></script>
+  <script src="../../../engines/genericEngines/progressEngine.js"></script>
+
+  <!-- def -->
+  <!-- <script src="../../../definitions/cap_1/pag_3.js"></script> -->
+  <script src="../../../definitions/cap_1/pag_6.js"></script>
+
+</body>
+
+</html>

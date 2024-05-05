@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript" src="../../../libraries/jspdf.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/html2canvas.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/mathLive.js"></script>
+  <script type="text/javascript" src="../../../libraries/jsxgraphcore.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../../libraries/jsxgraph.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/babel.min.js" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+  <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
+
+  <title></title>
+</head>
+
+<body>
+
+  <style>
+    .nexo {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .nexo {
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+
+
+
+  <div class=" containerNormal background-gray">
+    <h1>Intervalos y puntos del plano cartesiano</h1>
+    <hr>
+    <div class="content_2">
+      <div class="contenedor ">
+        <p class="parrafo infoText"> Los intervalos son fundamentales como lenguaje para hablar de zonas donde las
+          curvas
+          (que comienzan a
+          ser estudiadas en el próximo Capítulo) cumplen ciertas propiedades. Es conveniente que tenga presente que
+          los intervalos son subconjuntos de números reales, aunque muy particulares (si dos números pertenecen al
+          intervalo, todos los que "están entre ellos” tambien pertenecen al intervalo). A continuación se dan
+          algunos
+          elementos sobre la notación conjuntista, frecuentemente utilizada.
+        </p>
+      </div>
+      <div class="contenedor infoText">
+        <h4 class="parrafo superTitle">
+          Cómo se escribe la definición de un conjunto.
+        </h4>
+        <p class="parrafo infoText ">Lo que se va a definir se escribe, seguido de un signo igual. Por ejemplo si se
+          quiere
+          definir el intervalo
+          cerrado de extremos a y b, se escribe: &nbsp; &nbsp; <span class="operationContainer">[a,b]</span>
+        </p>
+        <p class="parrafo ">A la derecha suelen ir dos llaves: <span
+            class="operationContainer scaleHover operationContainer--mathField scaleHover"><math-field readonly
+              class="mathElementField ">\left\lbrack a,b\right\rbrack=\left\lbrace\right._{\placeholder{
+              }}\rbrace</math-field></span>
+          <!-- &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [a,b] = {&nbsp;
+               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;} -->
+        </p>
+        <p class="parrafo">y entre esas llaves una barra vertical: <span
+            class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">[a,b]=\left\lbrace \left|\right\rbrace\right.</math-field> </span> <!-- &nbsp; &nbsp; [a,b] = {&nbsp; &nbsp; &nbsp;
+               &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } --></p>
+        <p class="parrafo">Antes de la barra se suele poner una letra que sirve para referirnos a los elementos.</p>
+        <p class="parrafo inputCenter "> <span class="operationContainer operationContainer--mathField scaleHover">
+            <math-field readonly class="mathElementField ">[a,b]=\left\lbrace
+              x\left|\right\rbrace\right.</math-field> </span>
+          <!-- [a,b] = { &nbsp; &nbsp; x &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } -->
+          o <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField">[a,b]=\left\lbrace x\in\left|\right&nbsp;\rbrace\right. </math-field>
+          </span>
+          <!-- &nbsp; [a,b] = {&nbsp; &nbsp; x ∈ R &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -->
+        </p>
+      </div>
+      <div class="contenedor margen-bottom-50 infoText">
+        <p class="parrafo">El símbolo ∈ se lee “pertenece a”. Así <span class="operationContainer">x ∈ R </span>
+          quiere decir que el objeto o elemento
+          representado por <span class="" style="background-color:#aadeef">x</span>
+          pertenece a <span class="" style="background-color:#aadeef">R</span>. Para escribir “no pertenece”, se
+          utiliza <span class="" style="background-color:#aadeef">∉</span> .
+        </p>
+        <p class="parrafo">Después de la barra se ponen las propiedades que cumplen los elementos del conjunto que
+          se está definiendo.</p>
+
+        <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+            class="mathElementField ">[a,b]=\left\lbrace x\in R\left|a\leq x\leq
+            b\right\rbrace\right.</math-field> </span>
+
+      </div>
+      <div class="contenedor margen-bottom-50 infoText">
+        <div class="">
+          <p class="parrafo subtitulo">Intervalo cerrado: </p>
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">[a,b]=\left\lbrace x\in R\left|a\leq x\leq
+              b\right\rbrace\right.</math-field> </span>
+          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <p class="parrafo">[a,b] = { x ∈ R | a ≤ x ≤ b}</p> -->
+        </div>
+        <div class="">
+          <p class="parrafo subtitulo">Intervalo abierto: </p>
+
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">[a,b]=\left\lbrace x\in R\left|a &lt;x
+              &lt;b\right\rbrace\right.</math-field> </span>
+        </div>
+        <div class="">
+          <!-- &lt -->
+          <p class="parrafo subtitulo">Conjunto formado por a y b: </p>
+
+          <span class="operationContainer operationContainer--mathField scaleHover"><math-field readonly
+              class="mathElementField ">\lbrace a,b\rbrace</math-field></span>
+        </div>
+        <p class="parrafo">Sera A y B dos conjuntos, entonces:</p>
+      </div>
+      <div class="contenedor margen-bottom-50 infoText">
+
+        <div class=""> <!-- x\in B\rbrace -->
+          <p class="parrafo subtitulo marginTop-1">Unión de Conjuntos:</p>
+
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">A\cup B=\lbrace x\left|\right.x\in
+              A^{}\rbrace</math-field>&nbsp;&nbsp;</span> <span class='nexo'>ó</span>
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">\lbrace x\left|\right.x\in B^{}\rbrace</math-field>&nbsp;&nbsp;</span>
+        </div>
+        <br>
+        <div class="">
+          <p class="parrafo subtitulo marginTop-1">Intersección de conjuntos:</p>
+
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">A\cap B=\lbrace x\left|\right.x\in
+              A^{}\rbrace</math-field>&nbsp;&nbsp;</span><span class='nexo'>y</span>
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">\lbrace x\left|\right.x\in B^{}\rbrace</math-field>&nbsp;&nbsp;</span>
+        </div>
+        <br>
+
+        <div class="">
+          <p class="parrafo subtitulo marginTop-1">Diferencia de conjuntos:</p>
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">A-B=\lbrace x\left|\right.x\in A\rbrace</math-field>&nbsp;&nbsp;</span> <span
+            class='nexo'>y</span>
+          <span class="operationContainer operationContainer--mathField scaleHover"> <math-field readonly
+              class="mathElementField ">\lbrace x\left|\right.x\notin B\rbrace</math-field>&nbsp;&nbsp;</span>
+        </div>
+      </div>
+      <div class="contenedor infoText">
+        <p class="subtitulo">Cómo se escribe la definición de una propiedad de conjuntos.</p>
+        <p class="parrafo">Primeramente se escribe la propiedad (de los conjuntos) que se va a definir,
+          seguida de un signo de equivalencia <span class="" style="background-color:#aadeef">⇔</span> . Por
+          ejemplo, si se quiere definir la contención de un conjunto en
+          otro:</p>
+        <span class="parrafo inputCenter operationContainer">A ⊂ B ⇔ </span>
+        <p class="parrafo">A la derecha de ⇔, se escribe la propiedad que deben cumplir los elementos, de los
+          conjuntos, para que la propiedad,
+          de los conjuntos, se cumpla:</p>
+
+        <!-- A\subset B\leftarrow\rightarrow\forall\times\lbrack\times\in A\rightarrow\times\in B\rbrack -->
+
+        <span class="parrafo operationContainer">A ⊂ B ⇔ ∀ x[ x∈A → x∈B]</span>
+        <p class="parrafo inputCenter"> El símbolo <span class="operationContainer">∀x[ &nbsp; &nbsp;&nbsp;
+            &nbsp;&nbsp; &nbsp; ]</span> se lee <i>"Para todo
+            x se cumple"</i></p>
+        <p class="parrafo inputCenter">El símbolo <span class="" style="background-color:#aadeef">∃</span> se lee
+          <i>"Existe por lo menos un"</i>
+        </p>
+        <p class="subtitulo">Propiedades</p>
+        <div class="">
+          <p class="parrafo subtitulo">"A está contenido en B".</p>
+          <span class="operationContainer operationContainer--mathField scaleHover"><math-field readonly
+              class="mathElementField ">A\subset B\leftarrow\rightarrow\forall\times\lbrack\times\in
+              A\rightarrow\times\in B\rbrack</math-field></span>
+
+        </div>
+        <div class="">
+          <!-- A\nsubset B\leftarrow\rightarrow\exists x\lbrack x\in A\;y\;x\notin B -->
+          <p class="parrafo subtitulo">"A no está contenido en B".</p>
+          <span class="operationContainer operationContainer--mathField scaleHover"><math-field readonly
+              class="mathElementField "> A\nsubset B\leftarrow\rightarrow\exists x\lbrack x\in A\;y\;x\notin
+              B</math-field></span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="mainOwner" class="d-flex flex-wrap justify-content-center">
+
+  </div>
+
+  <div id="grid" class="d-flex flex-wrap justify-content-center" style="max-width: 1200px; margin: 0;">
+
+  </div>
+
+
+
+  <template id="template">
+    <div class="content_1">
+      <div class="content_2">
+
+      </div>
+    </div>
+  </template>
+  <script src="../../../definitions/cap_0/pag_4.js"></script>
+
+</body>
+
+</html>

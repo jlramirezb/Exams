@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../../../libraries/styles.css">
+  <link rel="stylesheet" href="../../../libraries/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../libraries/jsxgraph.css">
+  <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+
+
+</head>
+
+<body>
+  <style>
+    .parrafo {
+      text-align: left;
+      padding: 10px;
+    }
+
+    @media only screen and (max-width: 320px) {
+      .board-validation-curves {
+        width: 250px !important;
+      }
+
+      .orderLarge input {
+        max-height: 24px;
+
+      }
+
+      .parrafo {
+
+
+        background-color: #f2f2f2;
+        border-radius: .2rem;
+      }
+    }
+  </style>
+  <div class="containerNormal background-gray">
+
+    <h3>Estudio de Curvas</h3>
+    <hr>
+    <p class="note">
+      <strong> <i>En los ejercicios que siguen la curva f debe ser conexa.</i></strong>
+      Escriba al lado de los ejes, los números que necesite para que quede claro que la curva dibujada cumple las
+      condiciones exigidas.
+    </p>
+
+
+    <div class="d-flex justify-content-center flex-column">
+
+      <div id="mainOwner" class="d-flex flex-wrap justify-content-center">
+
+      </div>
+
+      <div id="grid" class="d-flex flex-wrap justify-content-center" style="max-width: 1200px; margin: 0;">
+
+      </div>
+
+
+    </div>
+    <template id="template">
+      <div class="content_1">
+        <div class="content_2">
+
+        </div>
+      </div>
+    </template>
+
+    <!-- Librerías -->
+    <script src="../../../libraries/jsxgraphcore.js"></script>
+    <script src="../../../libraries/mathLive.js"></script>
+
+    <!-- Motores -->
+    <script src="../../../engines/genericEngines/mod_G.js"></script>
+    <script src="../../../engines/genericEngines/mathKeyboard.js"></script>
+    <script src="../../../engines/cap_1/boardDefault.js"></script>
+    <script src="../../../engines/cap_1/engineOwner.js"></script>
+    <script src="../../../engines/cap_1/validationCurves.js"></script>
+    <script src="../../../engines/genericEngines/progressEngine.js"></script>
+
+    <!-- Definition -->
+    <script src="../../../definitions/cap_1/pag_27.js"></script>
+</body>
+
+</html>

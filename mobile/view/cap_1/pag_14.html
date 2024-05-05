@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript" src="../../../libraries/jspdf.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/html2canvas.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/mathLive.js"></script>
+  <script type="text/javascript" src="../../../libraries/jsxgraphcore.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../../libraries/jsxgraph.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+  <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
+  <title></title>
+</head>
+
+<body>
+  <style>
+    @media only screen and (max-width: 350px) {
+      .board-validation-curves {
+        width: 250px;
+      }
+    }
+  </style>
+
+  <!-- <nav class="mb-5 border-bottom border-dark ">
+      <p class="navbar-brand font-italic text-break">
+         Estudio de Curvas
+      </p>
+   </nav> -->
+
+  <div id="" class="containerNormal background-gray">
+    <h3>Estudio de Curvas</h3>
+    <hr>
+    <p class="infoText">Complete cada recuadro con una curva <span class="expression">ƒ</span> conexa que cumpla con
+      las tres condiciones señaladas.
+    </p>
+
+    <div id="container" style="max-width: 1050px;">
+      <div class="d-flex flex-wrap justify-content-center">
+        <!--Contenedores de los boards-->
+        <div class="defBoard" data-artifact="artifact_1"></div>
+        <div class="defBoard" data-artifact="artifact_2"></div>
+        <div class="defBoard" data-artifact="artifact_3"></div>
+        <div class="defBoard" data-artifact="artifact_4"></div>
+        <div class="defBoard" data-artifact="artifact_5"></div>
+        <div class="defBoard" data-artifact="artifact_6"></div>
+        <div class="defBoard" data-artifact="artifact_7"></div>
+        <div class="defBoard" data-artifact="artifact_8"></div>
+        <div class="defBoard" data-artifact="artifact_9"></div>
+        <div class="defBoard" data-artifact="artifact_10"></div>
+        <div class="defBoard" data-artifact="artifact_11"></div>
+        <div class="defBoard" data-artifact="artifact_12"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../../engines/genericEngines/mod_G.js"></script>
+  <script src="../../../engines/genericEngines/progressEngine.js"></script>
+
+  <script src="../../../engines/cap_1/boardDefault.js"></script>
+  <script src="../../../engines/cap_1/validationCurves.js"></script>
+  <script src="../../../definitions/cap_1/pag_14.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript" src="../../../libraries/jspdf.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/html2canvas.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/mathLive.js"></script>
+  <script type="text/javascript" src="../../../libraries/jsxgraphcore.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../../libraries/jsxgraph.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/babel.min.js" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+  <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
+
+  <title></title>
+</head>
+
+<body>
+
+  <div id="mainOwner" class="containerNormal background-gray">
+    <h1>Plano Cartesiano</h1>
+    <hr>
+    <p>Complete las escalas de los ejes y luego represente los siguientes pares ordenados como puntos en el plano
+      cartesiano.</p>
+
+    <div class="note">
+      <p>Las entradas de cada punto se ocultan cuando pulsas o desplazas los puntos si vuelves a
+        presionar el punto aparecera de nuevo</p>
+      <div class="d-flex justify-content-center">
+        <img src="../../../assets/cap_0/notaInput.svg" alt="hello" style="width:3rem;">
+      </div>
+
+      </p>
+    </div>
+
+  </div>
+
+
+  <template id="globalTemplate">
+
+    <div id="artifact-container" class="  flex-wrap justify-content rounded btn-all artifact-container">
+      <div id="content" class="">
+
+      </div>
+      <div class="d-flex w-100 flex-wrap justify-content-center  rounded btn-all mb-3">
+        <div class="d-flex flex-row">
+          <div class="d-flex flex-wrap justify-content-start"></div>
+
+          <button class="reset button-marg buttonSecundary buttonKey" title="Reiniciar"></button>
+          <button class="check button-marg buttonPrimary buttonKey" title="Validar"></button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </template>
+  <div id="grid" class="d-flex  flex-wrap justify-content-center">
+  </div>
+
+  <template id="template">
+    <div class="content_1">
+      <div class="content_2">
+      </div>
+    </div>
+  </template>
+
+  <!-- template -->
+  <template id="tmp-cartesian">
+    <div id="artifacts" class="d-flex flex-column border-board-dark m-2 squares-div">
+
+      <math-field virtual-keyboard-mode='onfocus' class='textTop w-100 border-board-dark' disabled></math-field>
+      <math-field virtual-keyboard-mode='onfocus' class='textTop w-100 border-board-dark' disabled></math-field>
+
+      <div class="defBoard jxgbox mb-1 boardResp" data-board="board_0" data-artifact="artifact_1"> </div>
+
+      <math-field virtual-keyboard-mode='onfocus' class='textBottom w-100 border-board-dark' disabled></math-field>
+      <math-field virtual-keyboard-mode='onfocus' class='textBottom w-100 border-board-dark' disabled></math-field>
+
+      <div class="d-flex w-100 flex-wrap justify-content-center border border-dark rounded btn-all">
+        <div class="d-flex flex-row">
+          <div class="d-flex flex-wrap justify-content-center"></div>
+
+          <button class="pointClose button-marg buttonTertiary buttonKey" title="Punto para la curva"></button>
+          <button class="help buttonSecundary button-marg  buttonKey" title="Ayuda"></button>
+          <button class="back buttonSecundary button-marg  buttonKey" title="Retornar"></button>
+          <button class="reset button-marg buttonSecundary buttonKey" title="Reiniciar"></button>
+          <button class="check button-marg buttonPrimary buttonKey" title="Validar"></button>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </template>
+  <!-- fin  template -->
+  <script src="../../../engines/genericEngines/mod_G.js"></script>
+  <script src="../../../engines/genericEngines/progressEngine.js"></script>
+
+  <script src="../../../engines/genericEngines/mathKeyboard.js"></script>
+  <script src="../../../engines/genericEngines/engineOwner.js"></script>
+  <script src="../../../engines/cap_0/engineCartesian.js"></script>
+
+  <script src="../../../definitions/cap_0/pag_5.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- 
+
+     <div class="d-flex justify-content-center">
+         <img src="../../../assets/cap_0/notaInput.svg" alt="hello" style="width:3rem;">
+      </div>
+
+ -->

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script type="text/javascript" src="../../../libraries/jspdf.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/html2canvas.min.js"></script>
+  <script type="text/javascript" src="../../../libraries/mathLive.js"></script>
+  <script type="text/javascript" src="../../../libraries/jsxgraphcore.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../../../libraries/jsxgraph.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/styles.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/babel.min.js" />
+  <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+
+  <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
+
+  <title></title>
+</head>
+
+<body>
+
+  <style>
+    @media screen and (max-width: 400px) {
+
+      .narvar {
+        box-sizing: border-box;
+        padding: 10px;
+      }
+
+    }
+
+    @media screen and (max-width: 300px) {
+      #contentButtons {
+        align-items: center !important;
+      }
+
+      .allButtons {
+        box-sizing: border-box;
+        justify-content: flex-start;
+
+      }
+
+      .allButtons * {
+        box-sizing: border-box;
+        width: 55%;
+        margin: 3px;
+        height: 48px;
+      }
+
+
+
+      .paddiv {
+        outline: 2px solid #d4d3d3;
+
+      }
+
+      .divFather {}
+
+      #container-all-artifact {
+        width: 98%;
+        margin: 0;
+
+      }
+
+    }
+  </style>
+
+
+
+  <div class="containerNormal background-gray">
+    <h1>Intervalos y puntos en el plano cartesiano</h1>
+    <hr>
+    <div class="note">
+      <p>Para facilitar la usabilidad de los artefactos debe dejar un margen prudente
+        entre los puntos que desee graficar en la recta, de lo contrario estos no se graficarán.</small> </p>
+      </p>
+    </div>
+
+
+    <div class="d-flex w-100 justify-content-center">
+      <div class="divFather  w-100 mb-1">
+        <div class="artifacts d-flex flex-column ">
+          <div class="containerOne w-100 d-flex flex-row justify-content-center mb-1">
+
+            <div class="divEngInt1 order-1 jxgbox d-flex justify-content-center align-items-center inpEngInt-1">
+              <h6 class="w-100 text-center mt-2">Intérvalos u operaciones con intérvalos</h6>
+            </div>
+            <div id="board" class="order-2 d-flex jxgbox  align-items-center BoardEngInt">
+              <h6 class="w-100 text-center mt-2"> Representación en la recta</h6>
+            </div>
+            <div class="divEngInt2 order-3 jxgbox d-flex justify-content-center align-items-center inpEngInt-1">
+              <h6 class="w-100 text-center mt-2" style="text-align: center;">
+                Representación algebraica y/o conjuntista
+              </h6>
+            </div>
+          </div>
+          <div class="containerTow d-flex flex-row"> </div>
+        </div>
+
+        <div id="container-all-artifact"></div>
+      </div>
+      <div>
+        <template id="template-interval">
+
+          <div class="paddiv artifacts d-flex flex-column ">
+            <div class="containerOne d-flex flex-row justify-content-center">
+
+              <div class="divEngInt1 colorInput order-1 inpEngInt-1 inpEngInt">
+                <math-field default-mode='text' class='inpEngInt1 w-100 h-100 border-0 jxgbox text-center math element'
+                  virtual-keyboard-mode='onfocus' keypress-sound='none'></math-field>
+              </div>
+
+              <div id="board" class="jxgbox BoardEngInt order-2"></div>
+
+              <div class="divEngInt2 colorInput inpEngInt-1  order-3 inpEngInt">
+                <math-field default-mode='text' class='inpEngInt2 w-100 h-100 border-0 text-center math element'
+                  virtual-keyboard-mode='onfocus' keypress-sound='none'></math-field>
+              </div>
+
+            </div>
+            <div class="containerTow d-flex flex-row"> </div>
+
+            <div class="w-100 d-flex  border-board-dark" style="min-width: 200px;" id="contentButtons">
+
+              <div class="ml-auto" id="resetVal" style="display:flex;">
+                <div class="allButtons mr-2">
+                  <button id="btn-pointA" class=" pointOpen buttonAux button-marg buttonKey buttonTool"
+                    data-tool="pointA" data-placement="top" title="Punto abierto"></button>
+                  <button id="btn-pointC" class=" pointClose buttonAux button-marg buttonKey buttonTool"
+                    data-tool="pointC" data-placement="top" title="Punto cerrado"></button>
+                  <button id="btn-conect" class=" conect buttonAux button-marg buttonKey buttonTool"
+                    data-tool="conection" data-placement="top" title="Conectar"></button>
+                </div>
+
+                <button id="btn-reset"
+                  class="buttonSecundary button-marg reset buttons-Target ml-auto p-2 mr-2 buttonKey"
+                  data-tooltip="tooltip" data-placement="top" title="Reiniciar"></button>
+                <button id="btn-validation"
+                  class="buttonPrimary button-marg check buttons-Target ml-auto p-2 mr-2 buttonKey"
+                  data-tooltip="tooltip" data-placement="top" title="Validar"></button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    
+  
+
+      <script src="../../../engines/genericEngines/mod_G.js"></script>
+      <script src="../../../engines/genericEngines/progressEngine.js"></script>
+
+      <script src="../../../engines/cap_0/engineInterval.js"></script>
+      <script src="../../../libraries/mathLive.js"></script>
+
+      <script src="../../../definitions/cap_0/pag_1.js"></script>
+    </div>
+
+</body>
+
+</html>
