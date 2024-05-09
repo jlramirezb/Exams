@@ -65,16 +65,44 @@ const def = {
   },
 };
 
+
+
+function seleccionarTresAleatorios(min, max) {
+  // Crear un array con los números consecutivos
+  const numeros = [];
+  for (let i = min; i <= max; i++) {
+    numeros.push(i);
+  }
+
+  // Seleccionar 3 números aleatorios distintos
+  const seleccionados = [];
+  while (seleccionados.length < 3) {
+    const indiceAleatorio = Math.floor(Math.random() * numeros.length);
+    const numeroAleatorio = numeros[indiceAleatorio];
+
+    // Verificar si el número ya está seleccionado
+    if (!seleccionados.includes(numeroAleatorio)) {
+      seleccionados.push(numeroAleatorio);
+      numeros.splice(indiceAleatorio, 1); // Eliminar el número del array
+    }
+  }
+
+  // Devolver los números seleccionados
+  return seleccionados;
+}
+
+const seleccionados = seleccionarTresAleatorios(1, 6);
+console.log(seleccionados); // Ejemplo: [17, 8, 23]
+
 let divfather = document.getElementById("container").firstChild.nextSibling;
-for (let i=1; i<=Math.floor(Math.random()*6 + 1);i++) {
+seleccionados.forEach(element => {
   let div = document.createElement("div");
   div.className = 'defBoard';
-  let att = 'artifact_'+i.toString();
+  let att = 'artifact_'+element.toString();
   console.log(att)
   div.setAttribute('data-artifact',att);
   divfather.appendChild(div);
   console.log(div);
-}
-
-
+});
+ 
 window.onload = main();
