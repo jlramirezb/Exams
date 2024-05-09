@@ -64,4 +64,17 @@ const def = {
     },
   },
 };
+
+let divfather = document.getElementById("container").firstChild.nextSibling;
+for (let i=1; i<=6;i++) {
+  let div = document.createElement("div");
+  div.className = 'defBoard';
+  let att = 'artifact_'+i.toString();
+  console.log(att)
+  div.setAttribute('data-artifact',att);
+  divfather.appendChild(div);
+  console.log(div);
+}
+
+
 window.onload = main();
