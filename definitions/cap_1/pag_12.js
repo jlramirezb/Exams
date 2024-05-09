@@ -9,8 +9,6 @@ const defBoards = {
 
 //si se va a agregar algo al objeto tiene que declararce la propiedad por defecto en el mod.js
 
-//Definicion de los artefactos
-
 const def = {
   artifact_1: {
     statementBottom: ['Dominio = [ -1,2 ]', 'conexa', 'Tiene dos puntos de corte con el eje x.'],
