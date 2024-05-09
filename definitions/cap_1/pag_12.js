@@ -66,7 +66,7 @@ const def = {
 };
 
 let divfather = document.getElementById("container").firstChild.nextSibling;
-for (let i=1; i<=Math.floor(Math.random()*6 + 1;i++) {
+for (let i=1; i<=Math.floor(Math.random()*6 + 1);i++) {
   let div = document.createElement("div");
   div.className = 'defBoard';
   let att = 'artifact_'+i.toString();
