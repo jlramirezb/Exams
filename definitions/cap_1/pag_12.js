@@ -94,6 +94,8 @@ function seleccionarTresAleatorios(min, max) {
 const seleccionados = seleccionarTresAleatorios(1, 6);
 console.log(seleccionados); // Ejemplo: [17, 8, 23]
 
+let i=1;
+
 let divfather = document.getElementById("container").firstChild.nextSibling;
 seleccionados.forEach(element => {
   let divbefore1 = document.createElement("div");
@@ -102,16 +104,25 @@ seleccionados.forEach(element => {
   divbefore2.className = 'question-box';
   let span1 = document.createElement("span");
   span1.className = 'question-text';
-  span1.textContent = 'P1'
+  span1.textContent = 'P'+i.toString();
+  i++;
   let div = document.createElement("div");
   div.className = 'defBoard';
   let att = 'artifact_'+element.toString();
   //console.log(att)
   div.setAttribute('data-artifact',att);
+  let divbottom = document.createElement("div");
+  divbottom.className = 'oval-container';
+  let span2 = document.createElement("span");
+  span2.className = 'oval-number';
+  span2.textContent = '3pts';
   divbefore2.appendChild(span1);
   divbefore1.appendChild(divbefore2);
   divbefore1.appendChild(div);
   divfather.appendChild(divbefore1);
+  divbottom.appendChild(span2);
+  divbefore1.appendChild(divbottom);
+
   console.log(divfather);
 });
  
