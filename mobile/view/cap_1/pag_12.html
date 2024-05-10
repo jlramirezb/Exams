@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="../../../libraries/styles.css" />
   <link rel="stylesheet" type="text/css" href="../../../libraries/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="../../../libraries/generalStylesFragata.css" />
+  <link rel="stylesheet" href="prueba.css">
   <script type="text/javascript" src="../../../engines/genericEngines/polyfillsAllUsed.js"></script>
 
 
@@ -36,14 +37,49 @@
       </p>
    </nav> -->
   <div id="" class="containerNormal background-gray">
-    <h3>Estudio de Curvas</h3>
+    <h3>Examen Capítulo 1</h3>
+    <style>
+      /* Estilos para los inputs */
+      input {
+        display: block;
+        margin-bottom: 10px;
+      }
+    </style>
+    <form action="process.php" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+  
+      <label for="cedula">Cédula:</label>
+      <input type="text" id="cedula" name="cedula" required>
+  
+      <label for="seccion">Sección:</label>
+      <select id="seccion" name="seccion" required>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+      </select>
+  
+    </form>
+    
     <hr>
     <p class="infoText">
       Complete con una curva que cumpla las especificaciones.
     </p>
     <!--Pinta los artefactos-->
     <div id="container" style="max-width: 1050px;">
-      <div class="d-flex flex-wrap">        
+      <div class="d-flex flex-wrap">  
+        <div class="question-container">
+          <div class="question-box">
+            <span class="question-text">P1</span>
+          </div>
+          <div class="defBoard" data-artifact="artifact_2"></div>
+          <div class="oval-container">
+            <span class="oval-number">3 pt</span>
+        </div>
+        </div>
       </div>
     </div>
   </div>
