@@ -14,7 +14,7 @@ let def = {
       [
         9,
         1,
-        9,
+        10,
         [
           [
             'board_1',
@@ -26,6 +26,7 @@ let def = {
             'x ∈(-∞, b] ∩ Dom(f) entonces ƒ(x)∈(-∞, b]',
             'x ∈[a, ∞) ∩ Dom(f) entonces ƒ(x)∈[a, ∞)ㅤ',
             'x ∈(-∞, ∞) ∩ Dom(f) entonces ƒ(x)∈(-∞, ∞)',
+            'f(-1) ≈ '
           ],
         ],
         true,
@@ -40,6 +41,7 @@ let def = {
               ['si', 'sí'],
               ['si', 'sí'],
               ['si', 'sí'],
+              ['2']
             ],
           ],
         },
