@@ -96,13 +96,23 @@ console.log(seleccionados); // Ejemplo: [17, 8, 23]
 
 let divfather = document.getElementById("container").firstChild.nextSibling;
 seleccionados.forEach(element => {
+  let divbefore1 = document.createElement("div");
+  divbefore1.className = 'question-container';
+  let divbefore2 = document.createElement("div");
+  divbefore2.className = 'question-box';
+  let span1 = document.createElement("span");
+  span1.className = 'question-text';
+  span1.textContent = 'P1'
   let div = document.createElement("div");
   div.className = 'defBoard';
   let att = 'artifact_'+element.toString();
-  console.log(att)
+  //console.log(att)
   div.setAttribute('data-artifact',att);
-  divfather.appendChild(div);
-  console.log(div);
+  divbefore2.appendChild(span1);
+  divbefore1.appendChild(divbefore2);
+  divbefore1.appendChild(div);
+  divfather.appendChild(divbefore1);
+  console.log(divfather);
 });
  
 window.onload = main();
