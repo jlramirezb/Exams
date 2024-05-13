@@ -1,5 +1,6 @@
 function defBoardDefault() {
   const divs = document.querySelectorAll('.defBoard');
+  //console.log(divs);
   divs.forEach((div, i) => {
     let boardSelect = div.dataset.board;
     if (!defBoards[boardSelect]) {
@@ -8,7 +9,9 @@ function defBoardDefault() {
     }
     const style = defBoards[boardSelect].style;
     div.setAttribute('id', 'boardDefault_' + i);
+    //console.log(style.maxWidth)
     div.style = 'width: ' + (style.maxWidth || '') + 'px; height: ' + (style.maxHeight || '') + 'px;';
+    //console.log(div)
     let board = JXG.JSXGraph.initBoard('boardDefault_' + i, {
       label: { visible: false },
       axis: style.axis[0] || false,
