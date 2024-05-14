@@ -1,5 +1,5 @@
-let def = {
-  example: {
+def = {
+ /*example: {
     datadefault: [
       [2, 'PARTE POSITIVA y PARTE NEGATIVA'],
             
@@ -12,7 +12,7 @@ let def = {
             
     ]
         
-  },
+  },*/
 
 
 
@@ -57,16 +57,37 @@ let def = {
   },*/
   artifact_2:{
     datadefault:[
-      [8, 1, 4, ['board_6', ], [['EJEMPLO 3']]],
+      [8, 1, 4, ['board_6', ], [['P4']]],
+      [5,2,0,
+        ['Puntos de Corte con Eje x','Puntos de Corte con Eje y'],
+      ],
       [5, 2, 0,
-        ['Parte Positiva ', 'Parte Negativa'],
+        ['Dominio', 'Rango'],
       ],
       [5, 2, 0,        
         ['Parte Creciente','Parte Decreciente'],
       ],
+      [5, 2, 0,        
+        ['Parte Positiva','Parte Negativa'],
+      ],
+      [5, 2, 0,        
+        ['Máximo Absoluto','Alcanzado en'],
+      ],
+      [5, 2, 0,        
+        ['Mínimo Absoluto','Alcanzado en'],
+      ],
+      [5, 2, 0,        
+        ['Máximo Relativo','Alcanzado en'],
+      ],
+      [5, 2, 0,        
+        ['Mínimo Relativo','Alcanzado en'],
+      ],
+      [5, 2, 0,        
+        ['Mínimo Relativo','Alcanzado en'],
+      ],
     ],
     conditions:[
-      ['(0,∞)'], ['(-∞,0)'],['1'],['(1,1)']  
+      ['{}'],['{}'],['(0,∞)'], ['(-∞,0)'],['1'],['(1,1)']  
     ],
     newContent:true,
     modeMath:true
@@ -433,7 +454,7 @@ let def = {
 }
 
 
-let defBoards = {
+defBoards = {
   board_1: {
     style: {
       axis: [false, true, true],
@@ -531,19 +552,21 @@ let defBoards = {
         yd: [[0, 0], [0, 1]],
         xd: [[0, 0], [1, 0]],
       },
-      boundingbox: [-4, 4, 4, -4],
+      boundingbox: [-5, 4, 6, -4],
     },
     points: [
-      [-2.3, -0.45, true], [-2.65, -0.38, true], [-3.1, -0.3, true],
-      [-0.25, -2.7, true], [-0.2, -3.1, true],
+      [-2.8, 3.1, true], [-3.1, 3.5, true],
+      [0.25, -3.8, true],[0.35, -3.5, true], [0.5, -3.1, true],
+      [3.5, -3.1, true],[3.65, -3.5, true],[3.75, -3.8, true], 
 
-      [3.3, 0.4, true], [3.6, 0.3, true],
-      [0.25, 3.4, true], [0.2, 3.7, true],
+      [5.35, 2.15, true], [5.6, 2.1, true],
+      //[0.25, 3.4, true], [0.2, 3.7, true],
     ],
 
     curves: [
-      [[[-2.1, -0.5], [-1, -1], [-0.5, -1.8], [-0.3, -2.5]]],
-      [[[0.3, 3.2], [0.7, 2], [2, 0.7], [1.2, 1.2], [3.1, 0.4]]]
+      [[[0, 0], [-0.5, 0.1], [-1.2, 0.4], [-2.3, 1.6], [-2.7, 2.8]]],
+      [[[0.5, -3], [0.75, -1], [1, 0], [2, 2], [3, 0],[3.25,-1],[3.5,-3]]],
+      [[[4,2.5],[4.2,2.7],[4.5,3],[4.75,2.5],[5,2.21]]]
     ],
   },
   board_7: {

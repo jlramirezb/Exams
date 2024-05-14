@@ -1,4 +1,4 @@
-const defBoards = {
+let defBoards = {
   board_0: {
     style: {
       maxHeight: 300,
@@ -9,7 +9,7 @@ const defBoards = {
 
 //si se va a agregar algo al objeto tiene que declararce la propiedad por defecto en el mod.js
 
-const def = {
+let def = {
   artifact_1: {
     statementBottom: ['Dominio = [ -1,2 ]', 'conexa', 'Tiene dos puntos de corte con el eje x.'],
     conditions: {
@@ -92,7 +92,7 @@ function seleccionarTresAleatorios(min, max) {
 }
 
 const seleccionados = seleccionarTresAleatorios(1, 6);
-console.log(seleccionados); // Ejemplo: [17, 8, 23]
+//console.log(seleccionados); // Ejemplo: [17, 8, 23]
 
 let i=1;
 
@@ -123,7 +123,7 @@ seleccionados.forEach(element => {
   divbottom.appendChild(span2);
   divbefore1.appendChild(divbottom);
 
-  console.log(divfather);
+  //console.log(divfather);
 });
  
 window.onload = main();
