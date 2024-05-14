@@ -18,24 +18,27 @@ let def = {
 
 
 
-
+/*
   artifact_Example:{
     datadefault:[
       [8, 1, 4, ['board_4', ], [['EJEMPLO 1']]],
 
       [5, 2, 0,
-        ['Parte Positiva ', 'Parte Negativa'],
-                
+        ['Parte Positiva ', 'Parte Negativa'],                
 
       ],
-    ],
-        
+      /***[5, 2, 0,
+        ['Parte Decreciente ', 'Parte Creciente'],                
+
+      ],/
+    ],        
     conditions:[
       ['(-∞,-1)∪(1,∞)'], ['(-1,1)'],
     ],
     defValueInput: ['(-∞,-1)∪(1,∞)', '(-1,1)'],
     buttonsActive: true,
     newContent:true
+    //modeMath:true
   },
   artifact_1:{
     datadefault:[
@@ -51,23 +54,25 @@ let def = {
     newContent:true,
     modeMath:true
         
-  },
+  },*/
   artifact_2:{
     datadefault:[
       [8, 1, 4, ['board_6', ], [['EJEMPLO 3']]],
       [5, 2, 0,
         ['Parte Positiva ', 'Parte Negativa'],
-
+      ],
+      [5, 2, 0,        
+        ['Parte Creciente','Parte Decreciente'],
       ],
     ],
     conditions:[
-      ['(0,∞)'], ['(-∞,0)'],  
+      ['(0,∞)'], ['(-∞,0)'],['1'],['(1,1)']  
     ],
     newContent:true,
     modeMath:true
         
   },
-  artifact_3:{
+  /*artifact_3:{
     datadefault:[
       [8, 1, 4, ['board_7', ], [['EJEMPLO 4']]],
       [5, 2, 0,
@@ -422,7 +427,7 @@ let def = {
     modeMath:true,
     specialDef:true // parametro que se usa para validar correctamente segmentos con el simbolo de la union  ∪
         
-  },
+  },*/
 
 
 }
@@ -519,8 +524,8 @@ let defBoards = {
     style: {
       axis: [false, true, true],
       grid: true,
-      maxWidth: 310,
-      maxHeight: 250,
+      maxWidth: 500,
+      maxHeight: 500,
 
       valueAxis: {
         yd: [[0, 0], [0, 1]],
